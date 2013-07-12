@@ -1,4 +1,4 @@
-Space-Blaster---X
-=================
+ph0ng
+=====
 
-2D space shooter. Made for a programing conference.
+A Pong and Breakout blend game.
