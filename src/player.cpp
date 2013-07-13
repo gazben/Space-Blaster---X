@@ -3,7 +3,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <mymath/mymath.h>
 #include <math.h>
-#include "Globals.h"
+#include "Window.h"
 
 sf::Sprite& Player::GetSprite()
 {
@@ -12,11 +12,18 @@ sf::Sprite& Player::GetSprite()
 
 void Player::Draw() 
 {
-	Globals::window->Draw(sprite);
+	
 }
 
+//DO NOT USE
 Player::Player()
 {
+
+}
+
+Player::Player(MainWindow* inwindow):window(inwindow)
+{
+
 	alfa = 0;
 	//Sprite data
 	tex.loadFromFile("playertexture.png");
@@ -32,7 +39,7 @@ void Player::rotate(){
 
 	sprite.setOrigin(tex.getSize().x/2.0, 0);
 
-	angle = 1 /  tan (mm::radians(  (float) sf::Mouse::getPosition().x - pos.x  / (float) sf::Mouse::getPosition().y - pos.y));
+	angle = 1 /  tan (mm::radians(  (float) sf::Mouse::getPosition(window->Getwindow()).x - pos.x  / (float) sf::Mouse::getPosition(window->Getwindow()).y - pos.y));
 
 	//Degree handle
 	if(alfa + angle > 360 )

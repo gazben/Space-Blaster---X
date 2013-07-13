@@ -1,5 +1,5 @@
 #include "GameObject.h"
-#include "Globals.h"
+//#include "Globals.h"
 #include <mymath/mymath.h>
 #include "Collision.h"
 

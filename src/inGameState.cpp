@@ -1,6 +1,5 @@
 #include "inGameState.h"
 #include "game.h"
-#include "Globals.h"
 #include <vector>
 
 
@@ -14,11 +13,10 @@ void InGameState::Update( )
 
 void InGameState::Draw()
 {
-	Globals::window->Draw(player.GetSprite());
-
+	
 }
 
-InGameState::InGameState(Game *game){
+InGameState::InGameState(Game *game):player(&game->window){
 	
 	this->game = game;
 }

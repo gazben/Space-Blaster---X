@@ -6,9 +6,6 @@
 namespace Globals{
 
 
-MainWindow *window;		//the main window
-
-
 };
 
 

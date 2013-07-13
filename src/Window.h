@@ -13,31 +13,15 @@ private:
 
 public:
 
-	MainWindow(int xres = 1280, int yres = 720){
-	
-	 mainwindow = new sf::RenderWindow(sf::VideoMode(xres, yres), "Space Blaster");
-	}
+	MainWindow(int xres = 1280, int yres = 720);
 
-	~MainWindow(){
+	~MainWindow();
 
-		delete mainwindow;
-	}
+	sf::RenderWindow& Getwindow();
 
-	sf::RenderWindow& Getwindow() {
+	void Draw(sf::Sprite& sprite);
 
-		return *mainwindow;
-	}
-
-	void Draw(sf::Sprite& sprite){
-	
-		mainwindow->draw(sprite);
-	}
-
-	void update(){
- 
-		mainwindow->clear();						
-		mainwindow->display();
-	}
+	void update();
 
 };
 

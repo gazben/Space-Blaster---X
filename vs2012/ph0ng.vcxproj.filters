@@ -37,7 +37,9 @@
     <ClCompile Include="..\src\Ship.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Window.cpp" />
+    <ClCompile Include="..\src\Window.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\game.h">

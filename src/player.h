@@ -3,17 +3,15 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/RenderWindow.hpp>
 #include <string.h>
 #include <mymath/mymath.h>
-
-
-using namespace sf;
-using std::string;
+#include "Window.h"
 
 class Player{
 
 private:
+
+	MainWindow *window;
 
 	//POSITION:
 	
@@ -22,12 +20,14 @@ private:
 
 
 	//Sprite data:
-	Texture tex;
-	Sprite sprite;
+	sf::Texture tex;
+	sf::Sprite sprite;
 
 public:
-	
-	Player();	//CTOR
+
+	Player();
+
+	Player(MainWindow*);	//CTOR
 
 	sf::Sprite& GetSprite();
 

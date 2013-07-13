@@ -1,10 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "game.h"
-#include <stdio.h>
-#include "Globals.h"
-
-
 
 void Game::Run()
 {
@@ -28,7 +24,7 @@ void Game::Run()
 
 			sf::Event event;
 
-			while( Globals::window->Getwindow().pollEvent(event) )
+			while( window.Getwindow().pollEvent(event) )
 			{
 				switch( event.type )
 				{
@@ -51,10 +47,8 @@ void Game::Run()
 
 			// Update the current gamestate
 			gamestates[currentState]->Update();
-			// Render current gamestate
-			gamestates[currentState]->Draw();
 
-
+			window.update();
 
 		}  //end of while (sum time)
 

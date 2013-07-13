@@ -6,19 +6,13 @@
 // *
 // ******************************************************************************
 
-
-
 #include "game.h"
-#include "Globals.h"
 
 int main(char** argc, int argv)
 {
-	Globals::window = new MainWindow();
-
+	
 	Game newgame;
 	newgame.Run();	
-
-	delete Globals::window;
 
 	return 0;
 }
