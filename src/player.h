@@ -14,7 +14,7 @@ private:
 	MainWindow *window;
 
 	//POSITION:
-	
+	mm::vec2 movevec;
 	mm::vec2 pos;
 	float alfa;  //rotation 
 

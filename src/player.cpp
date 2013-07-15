@@ -32,25 +32,23 @@ Player::Player(MainWindow* inwindow):window(inwindow)
 
 }
 
-//TODO
+//DO NOT TOUCH! math is doing its thing in here!
 void Player::rotate(){
-	
-	int angle = 0;
 
-	sprite.setOrigin(tex.getSize().x/2.0, 0);
+	sprite.setOrigin( tex.getSize().x / 2.0 , tex.getSize().y / 2.0 );
 
-	angle = 1 /  tan (mm::radians(  (float) sf::Mouse::getPosition(window->Getwindow()).x - pos.x  / (float) sf::Mouse::getPosition(window->Getwindow()).y - pos.y));
+	movevec.x = sf::Mouse::getPosition( window->Getwindow() ).x - sprite.getPosition().x;
+	movevec.y = sf::Mouse::getPosition( window->Getwindow() ).y - sprite.getPosition().y;	
 
-	//Degree handle
-	if(alfa + angle > 360 )
-		alfa = 0;
-	if(alfa + angle < 0)
-		alfa = 360;
+	mm::vec2 unitvec(1,0);
 
-	alfa += angle;
-	
-	sprite.setRotation(360- alfa);
-	
+	alfa = mm::degrees ( asin (  (float) (  movevec.x * unitvec.x + movevec.y * unitvec.y) / ( (float) (mm::length(movevec) * mm::length(unitvec)) ) ) );
+
+	if( sf::Mouse::getPosition( window->Getwindow() ).y <= sprite.getPosition().y )
+		sprite.setRotation(alfa);
+	else
+		sprite.setRotation( 360 - alfa + 180);
+
 }
 
 //input handle

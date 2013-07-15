@@ -21,7 +21,6 @@ public:
 
 	void Draw(sf::Sprite& sprite);
 
-	void update();
 
 };
 

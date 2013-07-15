@@ -6,15 +6,15 @@
     <void property="attributes">
      <void property="text">
       <string>+ gamestates
-+ players
++ currentstate
 + running
-+ currentstate</string>
+</string>
      </void>
     </void>
     <void property="methods">
      <void property="text">
       <string>+ Run //MAIN LOOP
-+ Draw //render function
+
 </string>
      </void>
     </void>
@@ -203,8 +203,7 @@
     </void>
     <void property="methods">
      <void property="text">
-      <string>+ update
-+ GetWindow
+      <string>+ GetWindow
 + Draw</string>
      </void>
     </void>
@@ -219,19 +218,19 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double5"/>
-      <double>148.0</double>
+      <double>164.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double5"/>
-      <double>22.0</double>
+      <double>35.0</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>148.0</double>
-     <double>22.0</double>
+     <double>164.0</double>
+     <double>35.0</double>
     </void>
    </object>
   </void>
@@ -402,6 +401,11 @@
   </void>
   <void method="addNode">
    <object class="com.horstmann.violet.ClassNode" id="ClassNode10">
+    <void property="attributes">
+     <void property="text">
+      <string>+movevec</string>
+     </void>
+    </void>
     <void property="methods">
      <void property="text">
       <string>+ fire

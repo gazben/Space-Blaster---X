@@ -1,6 +1,8 @@
 #include "Window.h"
 #include <SFML/Graphics.hpp>
 
+sf::Color white(255,255,255,255);
+
 MainWindow::MainWindow(int xres, int yres){
 
 	mainwindow = new sf::RenderWindow(sf::VideoMode(xres, yres), "Space Blaster");
@@ -17,10 +19,4 @@ sf::RenderWindow& MainWindow::Getwindow() {
 void MainWindow::Draw(sf::Sprite& sprite){
 
 	mainwindow->draw(sprite);
-}
-
-void MainWindow::update(){
-
-	mainwindow->clear();						
-	mainwindow->display();
 }

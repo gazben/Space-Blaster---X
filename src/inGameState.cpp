@@ -13,7 +13,7 @@ void InGameState::Update( )
 
 void InGameState::Draw()
 {
-	
+	game->window.Draw(player.GetSprite());
 }
 
 InGameState::InGameState(Game *game):player(&game->window){

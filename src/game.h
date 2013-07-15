@@ -17,20 +17,19 @@ class Game
 {
 public:
 	
-	
-	MainWindow window;
+	Game();
 
-	bool running;
+	~Game();
+
+	MainWindow window;
 
 	std::vector<GameState*> gamestates;
 
 	//index of the current gamestate
 	GState currentState;
 
-	Game();
+	bool running;
 
-	~Game();
-	
 	// MAIN LOOP 
 	void Run();
 

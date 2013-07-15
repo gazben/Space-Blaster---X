@@ -44,11 +44,16 @@ void Game::Run()
 				}
 			}
 
+			window.Getwindow().clear();
+			
 
-			// Update the current gamestate
-			gamestates[currentState]->Update();
+			// Update the current gamestate 
+			gamestates[currentState]->Update();		//input handle
 
-			window.update();
+			//render
+			gamestates[currentState]->Draw();
+
+			window.Getwindow().display();		
 
 		}  //end of while (sum time)
 
