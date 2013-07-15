@@ -1,4 +1,4 @@
-ph0ng
+Space Blaster - X
 =====
 
-A Pong and Breakout blend game.
+2D space shooter. Made for a programing conference. Mainly for educational purposes.
