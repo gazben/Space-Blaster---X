@@ -4,6 +4,7 @@
 #include <mymath/mymath.h>
 #include <math.h>
 #include "Window.h"
+#include "game.h"
 
 sf::Sprite& Player::GetSprite()
 {
@@ -12,14 +13,11 @@ sf::Sprite& Player::GetSprite()
 
 void Player::Draw() 
 {
-	
+	window->Draw(sprite);
 }
 
 //DO NOT USE
-Player::Player()
-{
-
-}
+Player::Player(){}
 
 Player::Player(MainWindow* inwindow):window(inwindow)
 {
@@ -51,7 +49,7 @@ void Player::rotate(){
 
 }
 
-//input handle
+//input handle for the player - NOT FINAL
 void Player::update (){
 
 
@@ -59,25 +57,33 @@ void Player::update (){
 	
 	if( sf::Keyboard::isKeyPressed(sf::Keyboard::W) ){
 
-		pos.y += -5;
-
+		pos.x +=  (float) movevec.x / ( 20 * (float) movevec.length() );
+		pos.y +=  (float) movevec.y / ( 20 * (float) movevec.length() );
 	}
 
 	if( sf::Keyboard::isKeyPressed(sf::Keyboard::A )){
 
-		pos.x += -5;
+		pos.x -= (float) movevec.x / ( 20 * ( (float) movevec.length() ) );
+		pos.y += (float) movevec.y / ( 20 * ( (float) movevec.length() ) );
 	}
 
 	if( sf::Keyboard::isKeyPressed(sf::Keyboard::S) ){
 
-		pos.y += 5;
+		pos.x -= (float) movevec.x / ( 20 * ( 2 * (float) movevec.length() ) );
+		pos.y -= (float) movevec.y / ( 20 * ( 2 * (float) movevec.length() ) );
 	}
 
 	if( sf::Keyboard::isKeyPressed(sf::Keyboard::D )){
 
-		pos.x += 5;
+		pos.x += (float) movevec.x / ( 20 * ( (float) movevec.length() ) );
+		pos.y -= (float) movevec.y / ( 20 * ( (float) movevec.length() ) );
 	}
 
 
 	sprite.setPosition(pos.x + 1280/2.0, pos.y + 720/2.0);		//update the sprite position
+}
+
+void Player::fire()
+{
+	
 }

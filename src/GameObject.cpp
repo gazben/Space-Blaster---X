@@ -9,6 +9,11 @@ GameObject::GameObject( mm::vec2 position, std::string texturefile) :pos(positio
 	sprite.setTexture(tex);
 }
 
+GameObject::GameObject()
+{
+
+}
+
 sf::Sprite& GameObject::GetSprite()
 {
 	return sprite;
@@ -27,8 +32,4 @@ bool GameObject::collusion( sf::Sprite& insprite)
 		return false;
 }
 
-void GameObject::Draw()
-{
-	
-}
 

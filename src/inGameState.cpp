@@ -16,8 +16,8 @@ void InGameState::Draw()
 	game->window.Draw(player.GetSprite());
 }
 
-InGameState::InGameState(Game *game):player(&game->window){
-	
+InGameState::InGameState(Game *game):player(&game->window)
+{
 	this->game = game;
 }
 

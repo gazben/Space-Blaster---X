@@ -342,7 +342,7 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double8"/>
-      <double>739.0039795305997</double>
+      <double>795.0039795305997</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
@@ -353,7 +353,7 @@
      </void>
     </void>
     <void method="setLocation">
-     <double>739.0039795305997</double>
+     <double>795.0039795305997</double>
      <double>529.32511306012</double>
     </void>
    </object>
@@ -400,7 +400,7 @@
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.ClassNode" id="ClassNode10">
+   <object class="com.horstmann.violet.ClassNode">
     <void property="attributes">
      <void property="text">
       <string>+movevec</string>
@@ -424,24 +424,24 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double10"/>
-      <double>1008.8141091604996</double>
+      <double>996.8141091604996</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double10"/>
-      <double>530.5682846001088</double>
+      <double>404.56828460010877</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>1008.8141091604996</double>
-     <double>530.5682846001088</double>
+     <double>996.8141091604996</double>
+     <double>404.56828460010877</double>
     </void>
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.ClassNode" id="ClassNode11">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode10">
     <void property="attributes">
      <void property="text">
       <string>+ ally</string>
@@ -463,7 +463,7 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double11"/>
-      <double>886.0952066221441</double>
+      <double>977.0952066221441</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
@@ -474,7 +474,7 @@
      </void>
     </void>
     <void method="setLocation">
-     <double>886.0952066221441</double>
+     <double>977.0952066221441</double>
      <double>528.0079590612081</double>
     </void>
    </object>
@@ -605,18 +605,6 @@
     </void>
    </object>
    <object idref="ClassNode8"/>
-   <object idref="ClassNode9"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.ClassRelationshipEdge">
-    <void property="bentStyle">
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/>
-    </void>
-    <void property="endArrowHead">
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/>
-    </void>
-   </object>
-   <object idref="ClassNode11"/>
    <object idref="ClassNode9"/>
   </void>
   <void method="connect">

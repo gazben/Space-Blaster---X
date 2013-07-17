@@ -8,8 +8,8 @@
 
 class GameObject{
 
-private:
-	
+//private:
+public:
 	//position
 	mm::vec2 pos;
 
@@ -17,7 +17,9 @@ private:
 	sf::Texture tex;
 	sf::Sprite sprite;
 
-public:
+//public:
+
+	GameObject();
 
 	GameObject(mm::vec2 , std::string);
 
@@ -27,7 +29,6 @@ public:
 
 	bool collusion(sf::Sprite&);
 
-	void Draw();
 
 };
 #endif

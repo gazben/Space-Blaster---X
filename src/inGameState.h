@@ -11,14 +11,14 @@ class InGameState : public GameState
 {
 private:
 	
-	Game *game;
+	
 
 	// The Players:
 	Player player;
 	//Player player2;		//Possible feature
 
 	// Bullets
-	std::vector <Bullet> Bullets;
+	std::vector <Bullet*> Bullets;
 
 	// Asteroids
 	//std::vector <Asteroid> Asteroids;
@@ -28,6 +28,10 @@ private:
 
 	// Ally Ships
 	//std::vector <AllyShip> AllyShips;
+
+protected:
+
+	Game *game;		//to reach the window class
 
 public:
 	InGameState(Game *game);

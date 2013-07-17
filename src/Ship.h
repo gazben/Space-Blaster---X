@@ -6,8 +6,9 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <string.h>
 #include <mymath/mymath.h>
+#include "GameObject.h"
 
-class Ship{
+class Ship :public GameObject{
 
 private:
 
@@ -16,12 +17,7 @@ private:
 	int hp;
 
 	//POSITION:
-	mm::vec2 pos;
 	float alfa;  //rotation 
-
-	//Sprite data:
-	sf::Texture tex;
-	sf::Sprite sprite;
 
 	//private functions
 	void rotate();						//mouse action handle

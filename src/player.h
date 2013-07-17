@@ -7,21 +7,30 @@
 #include <mymath/mymath.h>
 #include "Window.h"
 
+
 class Player{
 
 private:
 
+	//SPRITE DATA:
+	sf::Texture tex;
+	sf::Sprite sprite;
+
+	//stats
+	int shield;
+	int hp;
+
+	//window pointer for movement
 	MainWindow *window;
 
 	//POSITION:
-	mm::vec2 movevec;
+	float alfa;  //rotation in degrees
 	mm::vec2 pos;
-	float alfa;  //rotation 
+	mm::vec2 movevec;
 
-
-	//Sprite data:
-	sf::Texture tex;
-	sf::Sprite sprite;
+	//private functions
+	void rotate();						//mouse action handle
+	void fire();
 
 public:
 
@@ -31,10 +40,7 @@ public:
 
 	sf::Sprite& GetSprite();
 
-	void rotate();						//mouse action handle
 	void update();						//input handling
-
-	void fire();
 
 	void Draw();	//render function 
 
