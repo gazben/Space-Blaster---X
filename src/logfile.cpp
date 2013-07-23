@@ -9,11 +9,32 @@ LOGFILE::LOGFILE()
 
 LOGFILE::~LOGFILE()
 {
+
 	data.close();
 }
 
 void LOGFILE::log( std::string str)
 {
+
+ #ifdef _DEBUG
+// 
+// 	bool found = false;
+// 
+// 	for (int i = 0; i < tempdata.size(); i++)
+// 	{
+// 		if( tempdata[i].compare(str) == 1){
+// 			found = true;
+// 			break;
+// 		}
+// 	}
+// 
+// 	if( found == false){
 	data << str.c_str() << "\n";
+// 		tempdata.push_back( str );
+// 	}
+// 
+ #endif
 }
+
+
 

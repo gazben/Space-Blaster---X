@@ -89,3 +89,8 @@ mm::vec2 Player::Getmovevec()
 {
 	return movevec;
 }
+
+float Player::Getrotation()
+{
+	return alfa;
+}

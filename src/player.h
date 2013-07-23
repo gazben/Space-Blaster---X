@@ -42,6 +42,8 @@ public:
 
 	mm::vec2 Getmovevec();
 
+	float Getrotation();
+
 	sf::Sprite& GetSprite();
 
 	void update();						//input handling

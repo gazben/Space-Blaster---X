@@ -4,21 +4,27 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <mymath/mymath.h>
-#include "GameObject.h"
 
-class Asteroid :GameObject{
+class Asteroid{
 
 private:
+	//position
+	mm::vec2 pos;
+	mm::vec2 movevec;
 
-	int hp;
+	//SPRITE DATA:
+	sf::Texture tex;
+	sf::Sprite sprite;
+
+	//Stats
+	double hp;
 
 public:
 
 	Asteroid();
 
-	~Asteroid();
+	sf::Sprite& GetSprite();
 
-	void explode();
-
+	void update();
 };
 #endif

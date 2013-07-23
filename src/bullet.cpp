@@ -2,21 +2,23 @@
 #include "GameObject.h"
 #include "Globals.h"
 
-Bullet::Bullet( mm::vec2 invector, mm::vec2 inpos ):movevec(invector), pos(inpos)
+Bullet::Bullet( mm::vec2 invector, mm::vec2 inpos, float inrotation ):movevec(invector), pos(inpos), alfa(inrotation)
 {
-
+	//Position
 	movevec.x = movevec.x / 100.0;
 	movevec.y = movevec.y / 100.0;
 
 	//Sprite data
 	tex.loadFromFile("bullet1.jpg");
 	sprite.setTexture(tex);
+
+	//Same rotation as the ship
+	sprite.setOrigin( tex.getSize().x / 2.0 , tex.getSize().y / 2.0 );
+	sprite.setRotation( alfa );
 }
 
 sf::Sprite& Bullet::GetSprite()
 {
-	Globals::log -> log( " getsprite " );
-
 	return sprite;
 }
 

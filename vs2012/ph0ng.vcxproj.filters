@@ -40,8 +40,13 @@
     <ClCompile Include="..\src\Window.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\MenuState.cpp" />
-    <ClCompile Include="..\src\logfile.cpp" />
+    <ClCompile Include="..\src\logfile.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MenuState.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\game.h">
@@ -77,7 +82,12 @@
     <ClInclude Include="..\src\Window.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\MenuState.h" />
-    <ClInclude Include="..\src\logfile.h" />
+    <ClInclude Include="..\src\logfile.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MenuState.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Random.h" />
   </ItemGroup>
 </Project>

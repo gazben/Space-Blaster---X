@@ -3,11 +3,13 @@
 
 #include <iostream>
 #include <fstream>
+#include <set>
 
 class LOGFILE{
 
 private:
 
+	
 	std::ofstream data;
 
 public:
@@ -18,6 +20,6 @@ public:
 
 	void log(std::string);
 
-
+	
 };
 #endif // logfile_h__

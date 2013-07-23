@@ -93,6 +93,7 @@
     <ClCompile Include="..\src\logfile.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\player.cpp" />
+    <ClCompile Include="..\src\Random.cpp" />
     <ClCompile Include="..\src\Ship.cpp" />
     <ClCompile Include="..\src\MenuState.cpp" />
     <ClCompile Include="..\src\Window.cpp" />
@@ -109,6 +110,7 @@
     <ClInclude Include="..\src\logfile.h" />
     <ClInclude Include="..\src\MenuState.h" />
     <ClInclude Include="..\src\player.h" />
+    <ClInclude Include="..\src\Random.h" />
     <ClInclude Include="..\src\Ship.h" />
     <ClInclude Include="..\src\Window.h" />
   </ItemGroup>

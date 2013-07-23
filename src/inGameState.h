@@ -3,7 +3,9 @@
 
 #include "gameState.h"
 #include "bullet.h"
+#include "Asteroid.h"
 #include <vector>
+
 
 class Game;
 
@@ -21,7 +23,7 @@ private:
 	std::vector <Bullet*> Bullets;
 
 	// Asteroids
-	//std::vector <Asteroid> Asteroids;
+	std::vector <Asteroid*> Asteroids;
 
 	// Enemy Ships
 	//std::vector <EnemyShip> EnemyShips; 

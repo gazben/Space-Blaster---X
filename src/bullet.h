@@ -12,6 +12,7 @@ private:
 	//position
 	mm::vec2 pos;
 	mm::vec2 movevec;
+	float alfa;
 
 	//SPRITE DATA:
 	sf::Texture tex;
@@ -20,7 +21,7 @@ private:
 
 public:
 
-	Bullet(mm::vec2 invector, mm::vec2 inpos);
+	Bullet(mm::vec2 invector, mm::vec2 inpos, float inrotation);
 
 	sf::Sprite& GetSprite();
 
