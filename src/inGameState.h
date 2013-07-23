@@ -34,10 +34,14 @@ protected:
 	Game *game;		//to reach the window class
 
 public:
+
 	InGameState(Game *game);
+
 	~InGameState();
 
 	void Update();
+
+	void Logic();
 
 	void Draw();
 };

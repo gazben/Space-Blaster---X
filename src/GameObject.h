@@ -21,7 +21,7 @@ public:
 
 	GameObject();
 
-	GameObject(mm::vec2 , std::string);
+	GameObject(mm::vec2);
 
 	sf::Sprite& GetSprite();
 

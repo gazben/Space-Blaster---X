@@ -247,7 +247,6 @@
     <void property="methods">
      <void property="text">
       <string>+ collusion
-+ Draw
 + GetSprite
 + (virtual) update</string>
      </void>
@@ -400,7 +399,7 @@
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.ClassNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode10">
     <void property="attributes">
      <void property="text">
       <string>+movevec</string>
@@ -424,24 +423,24 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double10"/>
-      <double>996.8141091604996</double>
+      <double>990.8141091604996</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double10"/>
-      <double>404.56828460010877</double>
+      <double>270.56828460010877</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>996.8141091604996</double>
-     <double>404.56828460010877</double>
+     <double>990.8141091604996</double>
+     <double>270.56828460010877</double>
     </void>
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.ClassNode" id="ClassNode10">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode11">
     <void property="attributes">
      <void property="text">
       <string>+ ally</string>
@@ -616,7 +615,7 @@
      <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/>
     </void>
    </object>
-   <object idref="ClassNode10"/>
+   <object idref="ClassNode11"/>
    <object idref="ClassNode9"/>
   </void>
   <void method="connect">
@@ -630,6 +629,18 @@
    </object>
    <object idref="ClassNode5"/>
    <object idref="ClassNode0"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="startArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="BLACK_DIAMOND"/>
+    </void>
+   </object>
+   <object idref="ClassNode10"/>
+   <object idref="ClassNode2"/>
   </void>
  </object>
 </java>

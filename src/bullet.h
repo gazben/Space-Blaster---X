@@ -6,15 +6,23 @@
 #include <mymath/mymath.h>
 #include "GameObject.h"
 
-class Bullet :public GameObject{
+class Bullet{
 
 private:
-
+	//position
+	mm::vec2 pos;
 	mm::vec2 movevec;
+
+	//SPRITE DATA:
+	sf::Texture tex;
+	sf::Sprite sprite;
+
 
 public:
 
 	Bullet(mm::vec2 invector, mm::vec2 inpos);
+
+	sf::Sprite& GetSprite();
 
 	void update();
 };

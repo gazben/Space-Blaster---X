@@ -30,7 +30,7 @@ private:
 
 	//private functions
 	void rotate();						//mouse action handle
-	void fire();
+
 
 public:
 
@@ -38,12 +38,13 @@ public:
 
 	Player(MainWindow*);	//CTOR
 
+	mm::vec2 Getpos();
+
+	mm::vec2 Getmovevec();
+
 	sf::Sprite& GetSprite();
 
 	void update();						//input handling
-
-	void Draw();	//render function 
-
 
 };
 

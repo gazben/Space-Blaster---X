@@ -11,16 +11,13 @@ sf::Sprite& Player::GetSprite()
 	return sprite;
 }
 
-void Player::Draw() 
-{
-	window->Draw(sprite);
-}
-
 //DO NOT USE
 Player::Player(){}
 
 Player::Player(MainWindow* inwindow):window(inwindow)
 {
+	pos.x =  1280/2.0;
+	pos.y =  720/2.0;
 
 	alfa = 0;
 	//Sprite data
@@ -80,10 +77,15 @@ void Player::update (){
 	}
 
 
-	sprite.setPosition(pos.x + 1280/2.0, pos.y + 720/2.0);		//update the sprite position
+	sprite.setPosition(pos.x, pos.y);		//update the sprite position
 }
 
-void Player::fire()
+mm::vec2 Player::Getpos()
 {
-	
+	return pos;
+}
+
+mm::vec2 Player::Getmovevec()
+{
+	return movevec;
 }

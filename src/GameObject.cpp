@@ -3,10 +3,9 @@
 #include <mymath/mymath.h>
 #include "Collision.h"
 
-GameObject::GameObject( mm::vec2 position, std::string texturefile) :pos(position)
+GameObject::GameObject( mm::vec2 position) :pos(position)
 {
-	tex.loadFromFile(texturefile);
-	sprite.setTexture(tex);
+
 }
 
 GameObject::GameObject()

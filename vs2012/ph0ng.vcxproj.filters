@@ -41,6 +41,7 @@
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\MenuState.cpp" />
+    <ClCompile Include="..\src\logfile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\game.h">
@@ -77,5 +78,6 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\MenuState.h" />
+    <ClInclude Include="..\src\logfile.h" />
   </ItemGroup>
 </Project>

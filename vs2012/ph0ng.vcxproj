@@ -90,6 +90,7 @@
     <ClCompile Include="..\src\GameObject.cpp" />
     <ClCompile Include="..\src\Globals.cpp" />
     <ClCompile Include="..\src\inGameState.cpp" />
+    <ClCompile Include="..\src\logfile.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\player.cpp" />
     <ClCompile Include="..\src\Ship.cpp" />
@@ -105,6 +106,7 @@
     <ClInclude Include="..\src\gameState.h" />
     <ClInclude Include="..\src\Globals.h" />
     <ClInclude Include="..\src\inGameState.h" />
+    <ClInclude Include="..\src\logfile.h" />
     <ClInclude Include="..\src\MenuState.h" />
     <ClInclude Include="..\src\player.h" />
     <ClInclude Include="..\src\Ship.h" />
