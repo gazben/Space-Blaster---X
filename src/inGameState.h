@@ -13,8 +13,6 @@ class InGameState : public GameState
 {
 private:
 	
-	
-
 	// The Players:
 	Player player;
 	//Player player2;		//Possible feature
@@ -31,6 +29,17 @@ private:
 	// Ally Ships
 	//std::vector <AllyShip> AllyShips;
 
+	/////////
+	//private functions:
+	////////
+
+		//collision detection
+		void colldet();
+
+		void DrawAsteroids();
+
+		void DrawBullets();
+
 protected:
 
 	Game *game;		//to reach the window class
@@ -41,10 +50,13 @@ public:
 
 	~InGameState();
 
+	//updates positions 
 	void Update();
 
+	//do stuff with the exiswting objects! (for ex.: collision) 
 	void Logic();
 
+	//render the scene
 	void Draw();
 };
 

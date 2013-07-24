@@ -92,7 +92,11 @@
     </void>
     <void property="methods">
      <void property="text">
-      <string>+ Update
+      <string>- DrawAsteroids
+- DrawBullets
+- colldet
+
++ Update
 + Logic
 + Draw</string>
      </void>
@@ -263,19 +267,19 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double6"/>
-      <double>708.862104289581</double>
+      <double>551.862104289581</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double6"/>
-      <double>372.81079288499734</double>
+      <double>424.81079288499734</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>708.862104289581</double>
-     <double>372.81079288499734</double>
+     <double>551.862104289581</double>
+     <double>424.81079288499734</double>
     </void>
    </object>
   </void>
@@ -289,7 +293,9 @@
     </void>
     <void property="methods">
      <void property="text">
-      <string>+ explode</string>
+      <string>+ Gethp
++ Sethp
++ hit</string>
      </void>
     </void>
     <void property="name">

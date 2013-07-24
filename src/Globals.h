@@ -4,11 +4,15 @@
 #include <iostream>
 #include "Window.h"
 #include "logfile.h"
+#include "Random.h"
 
 namespace Globals{
 
-	extern LOGFILE* log;
+	void freeGlobals();
+
+	extern LOGFILE* log;	//Degug log
 	
+	extern Random* random;	//create random numbers
 
 };
 

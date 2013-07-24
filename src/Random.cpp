@@ -12,5 +12,5 @@ Random::~Random()
 
 int Random::getnumber()
 {
-	return rand() % 100;
+	return rand();
 }

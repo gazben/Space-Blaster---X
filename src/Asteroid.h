@@ -23,6 +23,12 @@ public:
 
 	Asteroid();
 
+	double Gethp();
+
+	void Sethp(double);
+
+	void hit(double);
+
 	sf::Sprite& GetSprite();
 
 	void update();

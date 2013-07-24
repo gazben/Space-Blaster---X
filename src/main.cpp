@@ -7,12 +7,15 @@
 // ******************************************************************************
 
 #include "game.h"
+#include "Globals.h"
 
 int main(char** argc, int argv)
 {
 	
 	Game newgame;
 	newgame.Run();	
+
+	Globals::freeGlobals();
 
 	return 0;
 }

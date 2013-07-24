@@ -46,7 +46,9 @@
     <ClCompile Include="..\src\MenuState.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Random.cpp" />
+    <ClCompile Include="..\src\Random.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\game.h">
@@ -88,6 +90,8 @@
     <ClInclude Include="..\src\MenuState.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Random.h" />
+    <ClInclude Include="..\src\Random.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
