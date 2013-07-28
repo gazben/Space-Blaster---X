@@ -11,7 +11,8 @@
 
 int main(char** argc, int argv)
 {
-	
+	Globals::INIT();
+
 	Game newgame;
 	newgame.Run();	
 

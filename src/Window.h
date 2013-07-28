@@ -4,6 +4,9 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 
+
+#include "Globals.h"
+
 class MainWindow{
 
 private:
@@ -13,7 +16,7 @@ private:
 
 public:
 
-	MainWindow(int xres = 1280, int yres = 720);
+	MainWindow(int = 1280 , int = 720);
 
 	~MainWindow();
 

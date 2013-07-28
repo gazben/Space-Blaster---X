@@ -32,7 +32,7 @@ void InGameState::DrawAsteroids()
 	for (int i = 0; i < Asteroids.size(); i++)
 	{
 
-		if( Asteroids[i] -> GetSprite().getPosition().x < 0 || Asteroids[i] -> GetSprite().getPosition().x > 1280 || Asteroids[i] -> GetSprite().getPosition().y < 0 || Asteroids[i] -> GetSprite().getPosition().y > 720 ){
+		if( Asteroids[i] -> GetSprite().getPosition().x < 0 || Asteroids[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Asteroids[i] -> GetSprite().getPosition().y < 0 || Asteroids[i] -> GetSprite().getPosition().y > Globals::resolution -> yres ){
 			Asteroids.erase( Asteroids.begin() + i );		//Delete the bullet that is outside the window
 		}
 		else{
@@ -48,7 +48,7 @@ void InGameState::DrawBullets()
 	for (int i = 0; i < Bullets.size(); i++)
 	{
 
-		if( Bullets[i] -> GetSprite().getPosition().x < 0 || Bullets[i] -> GetSprite().getPosition().x > 1280 || Bullets[i] -> GetSprite().getPosition().y < 0 || Bullets[i] -> GetSprite().getPosition().y > 720 ){
+		if( Bullets[i] -> GetSprite().getPosition().x < 0 || Bullets[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Bullets[i] -> GetSprite().getPosition().y < 0 || Bullets[i] -> GetSprite().getPosition().y > Globals::resolution -> yres ){
 			Bullets.erase( Bullets.begin() + i );		//Delete the bullet that is outside the window
 		}
 		else{
