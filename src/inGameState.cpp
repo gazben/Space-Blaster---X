@@ -70,6 +70,9 @@ void InGameState::Draw()
 
 InGameState::InGameState(Game *game):player(&game->window)
 {
+
+	firekeypress = false;
+
 	//to reach the screen
 	this->game = game;
 }
@@ -90,33 +93,51 @@ void InGameState::colldet()
 
 			if( Collision::BoundingBoxTest( Bullets[i] -> GetSprite(), Asteroids[index] -> GetSprite() ) == 1 )
 			{
-				//collision 
+				//hit the asteroid 
 				Asteroids[index] -> hit( 50 );
+
+				//delete the bullet
+				Bullets.erase( Bullets.begin() + i );
+				break;
 			}
+
 		}
 
-
+		
 	}
 
 }
 
 void InGameState::Logic()
 {
-
+	//collision detection
 	colldet();
+ 
 
 	//fire
-	if( sf::Keyboard::isKeyPressed( sf::Keyboard::Space ) ==  1 )
+	if( sf::Keyboard::isKeyPressed( sf::Keyboard::Space ) || sf::Mouse::isButtonPressed(  sf::Mouse::Left ) ) 
 	{
-		Bullets.push_back( new Bullet( player.Getmovevec() , player.Getpos() , player.Getrotation() ) );
 
+		if( firekeypress == false )
+			Bullets.push_back( new Bullet( player.Getmovevec() , player.Getpos() , player.Getrotation() ) );
+
+		//to disable keyrepeat
+		firekeypress = true;
+	}
+	else
+	{
+		firekeypress = false;
 	}
 
-	if( Globals::random->getnumber() % 100 == 25 )
+
+	//asteriod generation
+	if( Globals::random->getnumber() % 75 ==  25 || 50 )
 	{
 		Asteroids.push_back( new Asteroid() );
 	}
 
+
+	//asteroid explosion
 	for (int i = 0; i < Asteroids.size(); i++)
 	{
 		if( Asteroids[i] -> Gethp() <= 0 ){
@@ -124,6 +145,8 @@ void InGameState::Logic()
 			Asteroids.erase( Asteroids.begin() + i );
 		}
 	}
+
+
 
 }
 

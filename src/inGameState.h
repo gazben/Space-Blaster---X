@@ -29,6 +29,12 @@ private:
 	// Ally Ships
 	//std::vector <AllyShip> AllyShips;
 
+
+	//Other things:
+	bool firekeypress;
+
+
+
 	/////////
 	//private functions:
 	////////

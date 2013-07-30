@@ -20,6 +20,14 @@ private:
 	int shield;
 	int hp;
 
+	//gun
+	int magazinesize;
+	int magazinecurrent;
+
+
+	//ship level
+	//TODO
+
 	//window pointer for movement
 	MainWindow *window;
 
