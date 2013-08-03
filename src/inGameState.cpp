@@ -1,6 +1,7 @@
+#include <vector>
+
 #include "inGameState.h"
 #include "game.h"
-#include <vector>
 #include "bullet.h"
 #include "Globals.h"
 #include "Random.h"
@@ -32,12 +33,14 @@ void InGameState::DrawAsteroids()
 	for (int i = 0; i < Asteroids.size(); i++)
 	{
 
-		if( Asteroids[i] -> GetSprite().getPosition().x < 0 || Asteroids[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Asteroids[i] -> GetSprite().getPosition().y < 0 || Asteroids[i] -> GetSprite().getPosition().y > Globals::resolution -> yres ){
+		if( Asteroids[i] -> GetSprite().getPosition().x < 0 || Asteroids[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Asteroids[i] -> GetSprite().getPosition().y < 0 || Asteroids[i] -> GetSprite().getPosition().y > Globals::resolution -> yres || Asteroids[i] -> Gethp() <= 0 )
+		{
+			delete Asteroids[i]; 
 			Asteroids.erase( Asteroids.begin() + i );		//Delete the bullet that is outside the window
 		}
-		else{
-			game -> window.Draw( Asteroids[i] -> GetSprite() );	//if its inside the window render it!
+		else{	game -> window.Draw( Asteroids[i] -> GetSprite() );	//if its inside the window render it!
 		}
+
 
 	}
 }
@@ -49,6 +52,8 @@ void InGameState::DrawBullets()
 	{
 
 		if( Bullets[i] -> GetSprite().getPosition().x < 0 || Bullets[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Bullets[i] -> GetSprite().getPosition().y < 0 || Bullets[i] -> GetSprite().getPosition().y > Globals::resolution -> yres ){
+			
+			delete Bullets[i];
 			Bullets.erase( Bullets.begin() + i );		//Delete the bullet that is outside the window
 		}
 		else{
@@ -60,7 +65,7 @@ void InGameState::DrawBullets()
 
 void InGameState::Draw()
 {
-	game->window.Draw(player.GetSprite());
+	game->window.Draw( player.GetSprite() );
 
 	DrawBullets();
 
@@ -118,35 +123,26 @@ void InGameState::Logic()
 	if( sf::Keyboard::isKeyPressed( sf::Keyboard::Space ) || sf::Mouse::isButtonPressed(  sf::Mouse::Left ) ) 
 	{
 
-		if( firekeypress == false )
-			Bullets.push_back( new Bullet( player.Getmovevec() , player.Getpos() , player.Getrotation() ) );
+		if( firekeypress == false ){
 
+			if ( player.Getmagazinecurrent() > 0 ){
+
+				player.fire();
+				Bullets.push_back( new Bullet( player.Getmovevec() , player.Getpos() , player.Getrotation() ) );
+			}
+
+		}
 		//to disable keyrepeat
 		firekeypress = true;
 	}
-	else
-	{
-		firekeypress = false;
-	}
+	else{firekeypress = false;}
 
 
 	//asteriod generation
-	if( Globals::random->getnumber() % 75 ==  25 || 50 )
+	if( Globals::random->getnumber() % 100 ==  25 || 50 )
 	{
 		Asteroids.push_back( new Asteroid() );
 	}
-
-
-	//asteroid explosion
-	for (int i = 0; i < Asteroids.size(); i++)
-	{
-		if( Asteroids[i] -> Gethp() <= 0 ){
-
-			Asteroids.erase( Asteroids.begin() + i );
-		}
-	}
-
-
 
 }
 

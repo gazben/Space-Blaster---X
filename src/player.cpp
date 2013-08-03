@@ -29,9 +29,10 @@ Player::Player(MainWindow* inwindow):window(inwindow)
 	pos.y =  Globals::resolution -> yres / 2.0;
 
 	alfa = 0;
+
 	//Sprite data
 	tex.loadFromFile("playertexture.png");
-
+	sprite.setPosition( pos.x , pos.y );
 	sprite.setTexture(tex);
 
 }
@@ -105,3 +106,19 @@ float Player::Getrotation()
 {
 	return alfa;
 }
+
+void Player::fire()
+{
+   magazinecurrent--;
+}
+
+int Player::Getmagazinesize()
+{
+	return magazinesize;
+}
+
+int Player::Getmagazinecurrent()
+{
+	return magazinecurrent;
+}
+

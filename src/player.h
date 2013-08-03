@@ -56,6 +56,11 @@ public:
 
 	void update();						//input handling
 
+	void fire();
+
+	int Getmagazinesize();
+
+	int Getmagazinecurrent();
 };
 
 #endif
