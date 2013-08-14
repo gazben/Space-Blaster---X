@@ -1,24 +1,22 @@
-﻿Build started 2013.08.03. 13:57:47.
+﻿Build started 2013.08.14. 16:05:32.
      1>Project "E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\ph0ng.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Programfájlok (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D SFML_STATIC /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\MenuState.cpp ..\src\game.cpp ..\src\inGameState.cpp ..\src\main.cpp ..\src\player.cpp
-         player.cpp
+         E:\Programfájlok (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D SFML_STATIC /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Buttom.cpp ..\src\MenuState.cpp ..\src\game.cpp ..\src\inGameState.cpp ..\src\main.cpp ..\src\player.cpp
+         MenuState.cpp
      1>e:\bme\sch-gamedev\space-blaster---x\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-         inGameState.cpp
+     1>e:\bme\sch-gamedev\space-blaster---x\src\menustate.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\bme\sch-gamedev\space-blaster---x\src\menustate.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+         Buttom.cpp
      1>e:\bme\sch-gamedev\space-blaster---x\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(16): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(22): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(33): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(51): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(93): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(96): warning C4018: '<' : signed/unsigned mismatch
          Generating Code...
          Skipping... (no relevant changes detected)
+         player.cpp
          main.cpp
+         inGameState.cpp
          game.cpp
-         MenuState.cpp
        Link:
-         E:\Programfájlok (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Space blaster 2.0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "sfml-audio-s-d.lib" "sfml-graphics-s-d.lib" "sfml-main-d.lib" "sfml-system-s-d.lib" "sfml-window-s-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Space blaster 2.0.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Space blaster 2.0.lib" /MACHINE:X86 Debug\Asteroid.obj
+         E:\Programfájlok (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "sfml-audio-s-d.lib" "sfml-graphics-s-d.lib" "sfml-main-d.lib" "sfml-system-s-d.lib" "sfml-window-s-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.lib" /MACHINE:X86 Debug\Buttom.obj
+         Debug\Zombi.obj
          Debug\bullet.obj
          Debug\Collusion.obj
          Debug\game.obj
@@ -29,12 +27,11 @@
          Debug\main.obj
          Debug\player.obj
          Debug\Random.obj
-         Debug\Ship.obj
          Debug\MenuState.obj
          Debug\Window.obj
-         ph0ng.vcxproj -> E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Space blaster 2.0.exe
+         ph0ng.vcxproj -> E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.exe
      1>Done Building Project "E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\ph0ng.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:15.63
+Time Elapsed 00:00:06.42

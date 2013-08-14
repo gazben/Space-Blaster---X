@@ -1,10 +1,12 @@
 #ifndef inGameState_h__
 #define inGameState_h__
 
+#include <vector>
+
 #include "gameState.h"
 #include "bullet.h"
-#include "Asteroid.h"
-#include <vector>
+#include "Zombi.h"
+
 
 
 class Game;
@@ -21,7 +23,7 @@ private:
 	std::vector <Bullet*> Bullets;
 
 	// Asteroids
-	std::vector <Asteroid*> Asteroids;
+	std::vector <Zombi*> Asteroids;
 
 	// Enemy Ships
 	//std::vector <EnemyShip> EnemyShips; 

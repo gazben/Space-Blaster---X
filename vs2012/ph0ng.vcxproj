@@ -14,7 +14,7 @@
     <ProjectGuid>{F450905F-C3D9-49B2-8FCE-0B8183CF439F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ph0ng</RootNamespace>
-    <ProjectName>Space blaster 2.0</ProjectName>
+    <ProjectName>Zombisch</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -83,7 +83,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Asteroid.cpp" />
+    <ClCompile Include="..\src\Buttom.cpp" />
+    <ClCompile Include="..\src\Zombi.cpp" />
     <ClCompile Include="..\src\bullet.cpp" />
     <ClCompile Include="..\src\Collusion.cpp" />
     <ClCompile Include="..\src\game.cpp" />
@@ -94,12 +95,12 @@
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\player.cpp" />
     <ClCompile Include="..\src\Random.cpp" />
-    <ClCompile Include="..\src\Ship.cpp" />
     <ClCompile Include="..\src\MenuState.cpp" />
     <ClCompile Include="..\src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Asteroid.h" />
+    <ClInclude Include="..\src\Buttom.h" />
+    <ClInclude Include="..\src\Zombi.h" />
     <ClInclude Include="..\src\bullet.h" />
     <ClInclude Include="..\src\Collision.h" />
     <ClInclude Include="..\src\game.h" />
@@ -111,7 +112,6 @@
     <ClInclude Include="..\src\MenuState.h" />
     <ClInclude Include="..\src\player.h" />
     <ClInclude Include="..\src\Random.h" />
-    <ClInclude Include="..\src\Ship.h" />
     <ClInclude Include="..\src\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

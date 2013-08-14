@@ -2,7 +2,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <mymath/mymath.h>
 #include <math.h>
-
+#include <SFML/Audio.hpp>
 
 #include "player.h"
 #include "Window.h"
@@ -109,6 +109,7 @@ float Player::Getrotation()
 
 void Player::fire()
 {
+
    magazinecurrent--;
 }
 

@@ -4,9 +4,12 @@
 
 Bullet::Bullet( mm::vec2 invector, mm::vec2 inpos, float inrotation ):movevec(invector), pos(inpos), alfa(inrotation)
 {
+
 	//Position
-	movevec.x = movevec.x / 100.0;
-	movevec.y = movevec.y / 100.0;
+	alfa = alfa - 90;
+
+	movevec.x = 5 * cos( mm::radians( alfa ) ) - 0 * sin( alfa ) ;
+	movevec.y = 5 * sin( mm::radians( alfa ) ) + 0 * cos( alfa ) ;
 
 	//Sprite data
 	tex.loadFromFile("bullet1.jpg");
@@ -14,7 +17,7 @@ Bullet::Bullet( mm::vec2 invector, mm::vec2 inpos, float inrotation ):movevec(in
 
 	//Same rotation as the ship
 	sprite.setOrigin( tex.getSize().x / 2.0 , tex.getSize().y / 2.0 );
-	sprite.setRotation( alfa );
+	sprite.setRotation( alfa + 90 );
 }
 
 sf::Sprite& Bullet::GetSprite()

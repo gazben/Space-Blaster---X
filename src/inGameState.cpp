@@ -84,7 +84,18 @@ InGameState::InGameState(Game *game):player(&game->window)
 
 InGameState::~InGameState()
 {
-	
+
+	for (int i = 0; i < Bullets.size(); i++)
+	{
+		delete Bullets[i];
+		Bullets.erase( Bullets.begin() + i );	
+	}
+		
+	for (int i = 0; i < Asteroids.size(); i++)
+	{
+		delete Asteroids[i];
+		Asteroids.erase( Asteroids.begin() + i );	
+	}
 }
 
 void InGameState::colldet()
@@ -132,16 +143,17 @@ void InGameState::Logic()
 			}
 
 		}
+
 		//to disable keyrepeat
 		firekeypress = true;
 	}
-	else{firekeypress = false;}
+	else{ firekeypress = false; }
 
 
 	//asteriod generation
 	if( Globals::random->getnumber() % 100 ==  25 || 50 )
 	{
-		Asteroids.push_back( new Asteroid() );
+		Asteroids.push_back( new Zombi() );
 	}
 
 }

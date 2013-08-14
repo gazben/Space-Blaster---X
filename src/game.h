@@ -3,13 +3,16 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <vector>
+
+
 #include "gameState.h"
+#include "MenuState.h"
 #include "inGameState.h"
 #include "Window.h"
 
 enum GState
 {
-	//MENU,
+	MENU,
 	INGAME
 };
 

@@ -73,10 +73,10 @@ Game::~Game()
 //INIT
 Game::Game()
 {
+	gamestates.push_back( new MenuState( this ) );
+	gamestates.push_back( new InGameState( this ) );
 
-	gamestates.push_back(new InGameState(this));
-
-	currentState = INGAME;
+	currentState = MENU;
 	running = true;
 
 }
