@@ -4,7 +4,9 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <string.h>
-#include <mymath/mymath.h>
+#include "mymath/mymath.h"
+
+
 #include "Window.h"
 
 

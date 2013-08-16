@@ -73,10 +73,21 @@ Game::~Game()
 //INIT
 Game::Game()
 {
+	Globals::log->log( "GAME INIT SUCCESS" );
+	
+#ifndef _DEBUG
+	gamestates.push_back( new MovieState( this ) );
+#endif
+
 	gamestates.push_back( new MenuState( this ) );
 	gamestates.push_back( new InGameState( this ) );
 
+#ifndef _DEBUG
+	currentState = INGAME;
+#else
 	currentState = MENU;
+#endif
+	
 	running = true;
 
 }

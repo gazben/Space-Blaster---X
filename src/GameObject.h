@@ -3,7 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
-#include <mymath/mymath.h>
+
+#include "mymath/mymath.h"
 #include "Window.h"
 
 class GameObject{

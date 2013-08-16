@@ -7,6 +7,7 @@
 #include "Random.h"
 #include "Collision.h"
 
+
 void InGameState::Update( )
 {
 	//update the player
@@ -18,27 +19,27 @@ void InGameState::Update( )
 		Bullets[i] -> update();
 	}
 
-	//update the asteroids
-	for (int i = 0; i < Asteroids.size(); i++)
+	//update the Zombies
+	for (int i = 0; i < Zombies.size(); i++)
 	{
-		Asteroids[i] -> update();
+		Zombies[i] -> update();
 	}
 
 	Logic();
 }
 
 
-void InGameState::DrawAsteroids()
+void InGameState::DrawZombies()
 {
-	for (int i = 0; i < Asteroids.size(); i++)
+	for (int i = 0; i < Zombies.size(); i++)
 	{
 
-		if( Asteroids[i] -> GetSprite().getPosition().x < 0 || Asteroids[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Asteroids[i] -> GetSprite().getPosition().y < 0 || Asteroids[i] -> GetSprite().getPosition().y > Globals::resolution -> yres || Asteroids[i] -> Gethp() <= 0 )
+		if( Zombies[i] -> GetSprite().getPosition().x < 0 || Zombies[i] -> GetSprite().getPosition().x > Globals::resolution -> xres || Zombies[i] -> GetSprite().getPosition().y < 0 || Zombies[i] -> GetSprite().getPosition().y > Globals::resolution -> yres || Zombies[i] -> Gethp() <= 0 )
 		{
-			delete Asteroids[i]; 
-			Asteroids.erase( Asteroids.begin() + i );		//Delete the bullet that is outside the window
+			delete Zombies[i]; 
+			Zombies.erase( Zombies.begin() + i );		//Delete the bullet that is outside the window
 		}
-		else{	game -> window.Draw( Asteroids[i] -> GetSprite() );	//if its inside the window render it!
+		else{	game -> window.Draw( Zombies[i] -> GetSprite() );	//if its inside the window render it!
 		}
 
 
@@ -69,7 +70,7 @@ void InGameState::Draw()
 
 	DrawBullets();
 
-	DrawAsteroids();
+	DrawZombies();
 
 }
 
@@ -91,10 +92,10 @@ InGameState::~InGameState()
 		Bullets.erase( Bullets.begin() + i );	
 	}
 		
-	for (int i = 0; i < Asteroids.size(); i++)
+	for (int i = 0; i < Zombies.size(); i++)
 	{
-		delete Asteroids[i];
-		Asteroids.erase( Asteroids.begin() + i );	
+		delete Zombies[i];
+		Zombies.erase( Zombies.begin() + i );	
 	}
 }
 
@@ -104,13 +105,13 @@ void InGameState::colldet()
 	for (int i = 0; i < Bullets.size(); i++)
 	{
 
-		for (int index = 0; index < Asteroids.size(); index++)
+		for (int index = 0; index < Zombies.size(); index++)
 		{
 
-			if( Collision::BoundingBoxTest( Bullets[i] -> GetSprite(), Asteroids[index] -> GetSprite() ) == 1 )
+			if( Collision::BoundingBoxTest( Bullets[i] -> GetSprite(), Zombies[index] -> GetSprite() ) == 1 )
 			{
 				//hit the asteroid 
-				Asteroids[index] -> hit( 50 );
+				Zombies[index] -> hit( 50 );
 
 				//delete the bullet
 				Bullets.erase( Bullets.begin() + i );
@@ -150,11 +151,11 @@ void InGameState::Logic()
 	else{ firekeypress = false; }
 
 
-	//asteriod generation
-	if( Globals::random->getnumber() % 100 ==  25 || 50 )
-	{
-		Asteroids.push_back( new Zombi() );
-	}
+	//Zombie generation
+// 	if( Globals::random->getnumber() % 100 ==  25 || 50 )
+// 	{
+// 		Zombies.push_back( new Zombi() );
+// 	}
 
 }
 

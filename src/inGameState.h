@@ -23,14 +23,7 @@ private:
 	std::vector <Bullet*> Bullets;
 
 	// Asteroids
-	std::vector <Zombi*> Asteroids;
-
-	// Enemy Ships
-	//std::vector <EnemyShip> EnemyShips; 
-
-	// Ally Ships
-	//std::vector <AllyShip> AllyShips;
-
+	std::vector <Zombi*> Zombies;
 
 	//Other things:
 	bool firekeypress;
@@ -44,7 +37,7 @@ private:
 		//collision detection
 		void colldet();
 
-		void DrawAsteroids();
+		void DrawZombies();
 
 		void DrawBullets();
 

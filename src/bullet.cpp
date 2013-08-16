@@ -5,11 +5,8 @@
 Bullet::Bullet( mm::vec2 invector, mm::vec2 inpos, float inrotation ):movevec(invector), pos(inpos), alfa(inrotation)
 {
 
-	//Position
-	alfa = alfa - 90;
-
-	movevec.x = 5 * cos( mm::radians( alfa ) ) - 0 * sin( alfa ) ;
-	movevec.y = 5 * sin( mm::radians( alfa ) ) + 0 * cos( alfa ) ;
+	movevec.x = 5 * cos( mm::radians( alfa ) ) - 0 * sin( mm::radians( alfa ) ) ;
+	movevec.y = 5 * sin( mm::radians( alfa ) ) + 0 * cos( mm::radians( alfa ) ) ;
 
 	//Sprite data
 	tex.loadFromFile("bullet1.jpg");

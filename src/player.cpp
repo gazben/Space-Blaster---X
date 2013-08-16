@@ -1,9 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
-#include <mymath/mymath.h>
 #include <math.h>
 #include <SFML/Audio.hpp>
 
+#include "mymath/mymath.h"
 #include "player.h"
 #include "Window.h"
 #include "game.h"
@@ -22,7 +22,7 @@ Player::Player(){}
 Player::Player(MainWindow* inwindow):window(inwindow)
 {
 
-	magazinesize = 10;
+	magazinesize = 100;
 	magazinecurrent = magazinesize;
 
 	pos.x =  Globals::resolution -> xres / 2.0;
@@ -46,6 +46,7 @@ void Player::rotate(){
 	movevec.y = sf::Mouse::getPosition( window->Getwindow() ).y - sprite.getPosition().y;	
 
 	alfa = mm::degrees ( asin (  (float) (  movevec.x * unitvec.x + movevec.y * unitvec.y) / ( (float) (mm::length(movevec) * mm::length(unitvec)) ) ) );
+
 
 	if( sf::Mouse::getPosition( window->Getwindow() ).y <= sprite.getPosition().y )
 		sprite.setRotation(alfa);

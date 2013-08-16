@@ -20,6 +20,8 @@ public:
 
 	void log(std::string);
 
+	void log(std::string, double);
+
 	
 };
 #endif // logfile_h__

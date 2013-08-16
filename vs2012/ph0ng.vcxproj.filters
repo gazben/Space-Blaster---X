@@ -49,6 +49,9 @@
     <ClCompile Include="..\src\Buttom.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\MovieState.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\game.h">
@@ -91,6 +94,12 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Buttom.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MovieState.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sftheora\include\sfTheora.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>

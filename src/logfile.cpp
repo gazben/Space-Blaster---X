@@ -16,7 +16,7 @@ LOGFILE::~LOGFILE()
 void LOGFILE::log( std::string str)
 {
 
- #ifdef _DEBUG
+// #ifdef _DEBUG
 // 
 // 	bool found = false;
 // 
@@ -33,7 +33,13 @@ void LOGFILE::log( std::string str)
 // 		tempdata.push_back( str );
 // 	}
 // 
- #endif
+// #endif
+}
+
+void LOGFILE::log( std::string str, double value )
+{
+	data << str.c_str() << " ";
+	data << value << "\n";
 }
 
 

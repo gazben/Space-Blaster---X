@@ -11,12 +11,17 @@ MenuState::MenuState( Game *game )
 	this->game = game;
 
 	//Creating the buttons
-	Buttons.push_back( new Buttom( Globals::resolution -> xres / 2 , Globals::resolution -> yres / 4 , "singleplayer.png" , "new game" ) );
+	Buttons.push_back( new Buttom( Globals::resolution -> xres / 4 , Globals::resolution -> yres / 4 , "singleplayer.png" , "new game" ) );
+	Buttons.push_back( new Buttom( Globals::resolution -> xres / 4 , Globals::resolution -> yres / 2 , "quit.png" , "quit" ) );
+
 }
 
 MenuState::~MenuState()
 {
-
+	for (int i = 0; i < Buttons.size(); i++)
+	{
+		delete Buttons[i];
+	}
 }
 
 void MenuState::Update()

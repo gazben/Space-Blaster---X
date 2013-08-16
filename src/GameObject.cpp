@@ -1,6 +1,6 @@
 #include "GameObject.h"
 //#include "Globals.h"
-#include <mymath/mymath.h>
+#include "mymath/mymath.h"
 #include "Collision.h"
 
 GameObject::GameObject( mm::vec2 position) :pos(position)
