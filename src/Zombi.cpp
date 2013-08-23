@@ -4,8 +4,8 @@
 Zombi::Zombi():hp(100)
 {
 	//starting position for the asteroid
-	pos.x = Globals::random -> getnumber() % Globals::resolution -> xres;
-	pos.y = 0;
+	//pos.x = Globals::random -> getnumber() % Globals::resolution -> xres;
+	//pos.y = 0;
 
 	//initial speed for the asteroid
 	movevec.x = 0;

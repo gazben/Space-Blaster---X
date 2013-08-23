@@ -7,100 +7,43 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\game.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\player.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\inGameState.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\main.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\bullet.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Collusion.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\GameObject.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Globals.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Window.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\logfile.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\MenuState.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Random.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Zombi.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Buttom.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\MovieState.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
+    <ClCompile Include="..\src\AnimatedSprite.cpp" />
+    <ClCompile Include="..\src\Animation.cpp" />
+    <ClCompile Include="..\src\bullet.cpp" />
+    <ClCompile Include="..\src\Buttom.cpp" />
+    <ClCompile Include="..\src\Collusion.cpp" />
+    <ClCompile Include="..\src\game.cpp" />
+    <ClCompile Include="..\src\GameObject.cpp" />
+    <ClCompile Include="..\src\Globals.cpp" />
+    <ClCompile Include="..\src\inGameState.cpp" />
+    <ClCompile Include="..\src\logfile.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\MenuState.cpp" />
+    <ClCompile Include="..\src\MovieState.cpp" />
+    <ClCompile Include="..\src\Network.cpp" />
+    <ClCompile Include="..\src\player.cpp" />
+    <ClCompile Include="..\src\Random.cpp" />
+    <ClCompile Include="..\src\Window.cpp" />
+    <ClCompile Include="..\src\Zombi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\game.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\player.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gameState.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\inGameState.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\bullet.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Collision.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\GameObject.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Globals.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Window.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\logfile.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\MenuState.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Random.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Zombi.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Buttom.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\MovieState.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\sftheora\include\sfTheora.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
+    <ClInclude Include="..\src\AnimatedSprite.hpp" />
+    <ClInclude Include="..\src\Animation.hpp" />
+    <ClInclude Include="..\src\bullet.h" />
+    <ClInclude Include="..\src\Buttom.h" />
+    <ClInclude Include="..\src\Collision.h" />
+    <ClInclude Include="..\src\game.h" />
+    <ClInclude Include="..\src\GameObject.h" />
+    <ClInclude Include="..\src\gameState.h" />
+    <ClInclude Include="..\src\Globals.h" />
+    <ClInclude Include="..\src\inGameState.h" />
+    <ClInclude Include="..\src\logfile.h" />
+    <ClInclude Include="..\src\MenuState.h" />
+    <ClInclude Include="..\src\MovieState.h" />
+    <ClInclude Include="..\src\Network.h" />
+    <ClInclude Include="..\src\player.h" />
+    <ClInclude Include="..\src\Random.h" />
+    <ClInclude Include="..\src\Window.h" />
+    <ClInclude Include="..\src\Zombi.h" />
   </ItemGroup>
 </Project>

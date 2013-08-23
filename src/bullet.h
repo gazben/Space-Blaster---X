@@ -3,9 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
+
 #include "mymath/mymath.h"
 #include "GameObject.h"
-
+#include "Globals.h"
+#include "Window.h"
 
 class Bullet{
 
@@ -25,6 +27,16 @@ public:
 	Bullet(mm::vec2 invector, mm::vec2 inpos, float inrotation);
 
 	sf::Sprite& GetSprite();
+
+	mm::vec2 getPos();
+
+	void setPos( int x, int y );
+
+	void setAlfa( float );
+
+	mm::vec2 getMovevec();
+
+	void setMovevec( int, int );
 
 	void update();
 };

@@ -26,7 +26,11 @@ public:
 
 	sf::Sprite& GetSprite();
 
-	virtual void update(); 
+	virtual void update();
+
+	void setPos( int, int);
+
+	mm::vec2 getPos();
 
 	bool collusion(sf::Sprite&);
 

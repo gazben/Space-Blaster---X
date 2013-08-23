@@ -4,7 +4,6 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <vector>
 
-
 #include "gameState.h"
 #include "MenuState.h"
 #include "inGameState.h"

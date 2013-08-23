@@ -4,10 +4,13 @@
 #include <vector>
 
 #include "gameState.h"
-#include "bullet.h"
 #include "Zombi.h"
-
-
+#include "game.h"
+#include "bullet.h"
+#include "Globals.h"
+#include "Collision.h"
+#include "player.h"
+#include "Network.h"
 
 class Game;
 
@@ -29,6 +32,17 @@ private:
 	bool firekeypress;
 
 
+	//////////////////////
+	//network properties:
+// 	std::string ip;
+// 	bool server;
+// 
+// 	network* coopnetwork;
+
+
+	//////////////////////
+
+
 
 	/////////
 	//private functions:
@@ -47,7 +61,7 @@ protected:
 
 public:
 
-	InGameState(Game *game);
+	InGameState(Game *game, std::string inPlayername = "defaultplayer");
 
 	~InGameState();
 
@@ -59,7 +73,8 @@ public:
 
 	//render the scene
 	void Draw();
-};
 
+	friend class network;
+};
 
 #endif // inGameState_h__

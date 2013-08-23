@@ -2,16 +2,18 @@
 #define Globals_h__
 
 #include <iostream>
-#include <map>
+#include <SFML/Network.hpp>
+#include <SFML/Graphics/Text.hpp>
 
+#include "mymath/mymath.h"
 #include "Window.h"
 #include "logfile.h"
 #include "Random.h"
 
 struct res
 {
-	int xres;
-	int yres;
+	float xres;
+	float yres;
 };
 
 namespace Globals{
@@ -30,9 +32,13 @@ namespace Globals{
 	
 	extern Random* random;	//create random numbers
 
-	extern  res* resolution;
+	extern res* resolution;
 
+	extern mm::vec2* unitvec;
 
+	extern sf::IpAddress* ip;
+
+	extern std::string* version;
 
 };
 

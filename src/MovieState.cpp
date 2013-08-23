@@ -13,10 +13,11 @@ MovieState::MovieState( Game *game )
 
 	this -> game = game;
 
-#ifdef _DEBUG
+#ifndef _DEBUG
 
-#else
-	if( intro.openFromFile( "introkszk.ogv" ) )
+		intro = new sfe::Movie;
+
+	if( intro->openFromFile( "introkszk.ogv" ) )
 		Globals::log->log( " movie load SUCCESS " );
 
 	else{
@@ -26,15 +27,25 @@ MovieState::MovieState( Game *game )
 
 	game->window.Getwindow().setVerticalSyncEnabled( true );
 
-	intro.resizeToFrame( 0 , 0 , Globals::resolution->xres , Globals::resolution->yres  );
+	intro->resizeToFrame( 0 , 0 , Globals::resolution->xres , Globals::resolution->yres  );
 
-	intro.play();
+	intro->play();
 
 #endif // !RELEASE
 
 }
 
-MovieState::~MovieState(){}
+MovieState::~MovieState(){
+
+#ifndef _DEBUG
+
+	intro->stop();
+	delete intro;
+
+#endif
+
+}
+
 
 void MovieState::Update()
 {
@@ -44,13 +55,13 @@ void MovieState::Update()
 
 	if( sf::Keyboard::isKeyPressed( sf::Keyboard::Space ) || sf::Keyboard::isKeyPressed( sf::Keyboard::Escape ) )
 	{
-		intro.stop();
+		intro->stop();
 		game->currentState = MENU;
 	}
 
-	if( intro.getStatus() == sfe::Movie::Status::Stopped )
+	if( intro->getStatus() == sfe::Movie::Status::Stopped )
 	{
-		intro.stop();
+		//intro->stop();
 		game->currentState = MENU;
 	}
 
@@ -60,9 +71,10 @@ void MovieState::Update()
 
 void MovieState::Draw()
 {
+
 #ifndef _DEBUG
 
-	game -> window.Getwindow().draw( intro );
+	game -> window.Getwindow().draw( *intro );
 
 #endif // !_DEBUG
 }

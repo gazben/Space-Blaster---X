@@ -1,9 +1,6 @@
 #ifndef GameState_h__
 #define GameState_h__
 
-#include <SFML/Graphics/RenderWindow.hpp>
-#include "player.h"
-
 class GameState
 {
 public:

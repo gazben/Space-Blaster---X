@@ -31,4 +31,15 @@ bool GameObject::collusion( sf::Sprite& insprite)
 		return false;
 }
 
+void GameObject::setPos( int x, int y )
+{
+	pos.x = x;
+	pos.y = y;
+}
+
+mm::vec2 GameObject::getPos()
+{
+	return pos;
+}
+
 

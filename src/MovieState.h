@@ -22,7 +22,7 @@ private:
 
 #ifndef _DEBUG
 
-	sfe::Movie intro;
+	sfe::Movie* intro;
 
 #endif 
 

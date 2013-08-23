@@ -10,6 +10,8 @@ class Buttom{
 
 private:
 
+	bool clicked;
+
 	sf::Texture tex;
 	sf::Sprite sprite;
 

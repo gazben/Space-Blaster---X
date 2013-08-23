@@ -1,15 +1,8 @@
-#include <SFML/Graphics.hpp>
-#include <SFML/Graphics/Texture.hpp>
-#include <math.h>
-#include <SFML/Audio.hpp>
-
-#include "mymath/mymath.h"
 #include "player.h"
-#include "Window.h"
-#include "game.h"
-#include "Globals.h"
 
-mm::vec2 unitvec(1,0);
+
+
+//#include "game.h"
 
 sf::Sprite& Player::GetSprite()
 {
@@ -19,7 +12,7 @@ sf::Sprite& Player::GetSprite()
 //DO NOT USE
 Player::Player(){}
 
-Player::Player(MainWindow* inwindow):window(inwindow)
+Player::Player(MainWindow* inwindow , std::string inPlayername):window(inwindow), playername(inPlayername)
 {
 
 	magazinesize = 100;
@@ -45,7 +38,7 @@ void Player::rotate(){
 	movevec.x = sf::Mouse::getPosition( window->Getwindow() ).x - sprite.getPosition().x;
 	movevec.y = sf::Mouse::getPosition( window->Getwindow() ).y - sprite.getPosition().y;	
 
-	alfa = mm::degrees ( asin (  (float) (  movevec.x * unitvec.x + movevec.y * unitvec.y) / ( (float) (mm::length(movevec) * mm::length(unitvec)) ) ) );
+	alfa = mm::degrees ( asin (  (float) (  movevec.x * Globals::unitvec->x + movevec.y * Globals::unitvec->y) / ( (float) (mm::length(movevec) * mm::length( *Globals::unitvec ) ) ) ) );
 
 
 	if( sf::Mouse::getPosition( window->Getwindow() ).y <= sprite.getPosition().y )

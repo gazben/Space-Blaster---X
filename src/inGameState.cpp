@@ -1,14 +1,7 @@
-#include <vector>
-
 #include "inGameState.h"
-#include "game.h"
-#include "bullet.h"
-#include "Globals.h"
-#include "Random.h"
-#include "Collision.h"
 
 
-void InGameState::Update( )
+void InGameState::Update()
 {
 	//update the player
 	player.update();
@@ -74,8 +67,9 @@ void InGameState::Draw()
 
 }
 
-InGameState::InGameState(Game *game):player(&game->window)
+InGameState::InGameState(Game *game, std::string inPlayername):player(&game->window, inPlayername)
 {
+	//Globals::Network = new network( this );
 
 	firekeypress = false;
 

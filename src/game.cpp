@@ -83,7 +83,7 @@ Game::Game()
 	gamestates.push_back( new InGameState( this ) );
 
 #ifndef _DEBUG
-	currentState = INGAME;
+	currentState = MOVIE;
 #else
 	currentState = MENU;
 #endif
