@@ -21,9 +21,7 @@ void Game::Run()
 		while( sum_time >= 20000 )
 		{
 			sum_time -= 20000;
-
-			sf::Event event;
-
+			
 			while( window.Getwindow().pollEvent(event) )
 			{
 				switch( event.type )

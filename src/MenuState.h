@@ -24,13 +24,23 @@ private:
 	//FONTS
 	sf::Font normaltext;
 
-	//text that will appear on the screen
-	sf::Text ipadress;
 	sf::Text version;
+	
+	//Network options
+	sf::Text ipadress;
+	bool coop;
+	bool host;
+	bool join;
+
+	sf::Text playernameText;
+	std::string playername;
+		bool nameIN;
+	sf::Text ipText;
+	std::string ipconnect;
+		bool ipIN;
 
 	//to reach the window and the draw function
 	Game *game;
-
 
 	//buttons on the screen
 	std::vector <Buttom*> Buttons;
@@ -39,6 +49,9 @@ private:
 	sf::Texture tex;
 	sf::Sprite sprite;
 
+	//Private functions:
+	void keyboardInput( sf::Text& , std::string& , bool& );
+
 public:
 
 	MenuState(Game *game);
@@ -46,11 +59,10 @@ public:
 	~MenuState();
 
 	void Update();
+		
 
 	void Draw();
 
 	friend Buttom;
 };
-
-
 #endif // MenuState_h__

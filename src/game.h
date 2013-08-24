@@ -10,6 +10,10 @@
 #include "MovieState.h"
 #include "Window.h"
 
+
+
+class MenuState;
+
 enum GState
 {
 
@@ -27,6 +31,9 @@ enum GState
 
 class Game
 {
+private:
+	sf::Event event;
+
 public:
 	
 	Game();
@@ -44,6 +51,8 @@ public:
 
 	// MAIN LOOP 
 	void Run();
+
+	friend class MenuState;
 
 };
 
