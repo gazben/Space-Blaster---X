@@ -41,11 +41,11 @@ void Globals::INIT()
 		//close the file
 		fclose( settings );
 			
-		log->log( " INIT SUCCESS" );
+		log->log( "Globals: INIT SUCCESS" );
 	}
 	else
 	{
-		log->log( " INIT FAIL " );
+		log->log( "Globals: INIT FAIL" );
 	}
 
 }

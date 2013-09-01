@@ -1,18 +1,9 @@
 #include "player.h"
 
-
-
-//#include "game.h"
-
-sf::Sprite& Player::GetSprite()
-{
-	return sprite;
-}
-
 //DO NOT USE
 Player::Player(){}
 
-Player::Player(MainWindow* inwindow , std::string inPlayername):window(inwindow), playername(inPlayername)
+Player::Player(MainWindow* inwindow):window(inwindow)
 {
 
 	magazinesize = 100;
@@ -29,6 +20,14 @@ Player::Player(MainWindow* inwindow , std::string inPlayername):window(inwindow)
 	sprite.setTexture(tex);
 
 }
+
+
+sf::Sprite& Player::GetSprite()
+{
+	return sprite;
+}
+
+
 
 //DO NOT TOUCH! math is doing its thing in here!
 void Player::rotate(){
@@ -115,5 +114,16 @@ int Player::Getmagazinesize()
 int Player::Getmagazinecurrent()
 {
 	return magazinecurrent;
+}
+
+std::string Player::getName()
+{
+	return playername;
+}
+
+void Player::setName(  std::string inName)
+{
+
+	playername = inName;
 }
 

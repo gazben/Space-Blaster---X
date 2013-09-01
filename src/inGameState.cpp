@@ -1,5 +1,37 @@
 #include "inGameState.h"
 
+#include "Globals.h"
+#include "Collision.h"
+
+InGameState::InGameState(Game *game):player(&game->window)
+{
+	//Globals::Network = new network( this );
+
+	firekeypress = false;
+
+	//to reach the screen
+	this -> game = game;
+
+	game -> ingamestate = this;
+
+	//coopnetwork = new network();
+}
+
+InGameState::~InGameState()
+{
+
+	for (int i = 0; i < Bullets.size(); i++)
+	{
+		delete Bullets[i];
+		Bullets.erase( Bullets.begin() + i );	
+	}
+
+	for (int i = 0; i < Zombies.size(); i++)
+	{
+		delete Zombies[i];
+		Zombies.erase( Zombies.begin() + i );	
+	}
+}
 
 void InGameState::Update()
 {
@@ -65,32 +97,6 @@ void InGameState::Draw()
 
 	DrawZombies();
 
-}
-
-InGameState::InGameState(Game *game, std::string inPlayername):player(&game->window, inPlayername)
-{
-	//Globals::Network = new network( this );
-
-	firekeypress = false;
-
-	//to reach the screen
-	this->game = game;
-}
-
-InGameState::~InGameState()
-{
-
-	for (int i = 0; i < Bullets.size(); i++)
-	{
-		delete Bullets[i];
-		Bullets.erase( Bullets.begin() + i );	
-	}
-		
-	for (int i = 0; i < Zombies.size(); i++)
-	{
-		delete Zombies[i];
-		Zombies.erase( Zombies.begin() + i );	
-	}
 }
 
 void InGameState::colldet()

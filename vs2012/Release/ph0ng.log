@@ -1,8 +1,7 @@
-﻿  MenuState.cpp
+﻿  Level.cpp
 e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-..\src\MenuState.cpp(41): warning C4018: '<' : signed/unsigned mismatch
-..\src\MenuState.cpp(50): warning C4018: '<' : signed/unsigned mismatch
-..\src\MenuState.cpp(102): warning C4018: '<' : signed/unsigned mismatch
+  Zombi.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
   Generating code
   Finished generating code
   ph0ng.vcxproj -> E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Release\Zombisch.exe

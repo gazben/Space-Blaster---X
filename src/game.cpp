@@ -1,6 +1,50 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <time.h>
+
 #include "game.h"
+
+//INIT
+Game::Game()
+{
+	//Display time in log!
+	time_t rawtime;
+	struct tm * timeinfo;
+
+	time ( &rawtime );
+	timeinfo = localtime ( &rawtime );
+
+	Globals::log->log( asctime(timeinfo) );
+	Globals::log->log( "" );
+
+#ifndef _DEBUG
+	Globals::log->log( "Zombisch pre-Alfa version - Release version" );
+	gamestates.push_back( new MovieState( this ) );
+#endif
+	Globals::log->log( "Zombisch pre-Alfa version - Debug version" );
+	gamestates.push_back( new MenuState( this ) );
+	gamestates.push_back( new InGameState( this ) );
+
+#ifndef _DEBUG
+	currentState = MOVIE;
+#else
+	currentState = MENU;
+#endif
+
+	running = true;
+	coopnetwork = new network();
+
+}
+
+Game::~Game()
+{
+	running = false;
+
+	for (int i=0; i < gamestates.size(); i++)
+		delete gamestates[i];
+
+}
+
 
 void Game::Run()
 {
@@ -59,33 +103,4 @@ void Game::Run()
 
 }	//end of func.
 
-Game::~Game()
-{
-	running = false;
 
-	for (int i=0; i < gamestates.size(); i++)
-		delete gamestates[i];
-
-}
-
-//INIT
-Game::Game()
-{
-	Globals::log->log( "GAME INIT SUCCESS" );
-	
-#ifndef _DEBUG
-	gamestates.push_back( new MovieState( this ) );
-#endif
-
-	gamestates.push_back( new MenuState( this ) );
-	gamestates.push_back( new InGameState( this ) );
-
-#ifndef _DEBUG
-	currentState = MOVIE;
-#else
-	currentState = MENU;
-#endif
-	
-	running = true;
-
-}

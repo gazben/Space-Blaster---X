@@ -5,15 +5,13 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Color.hpp>
-#include <SFML/Graphics/Font.hpp>
-#include <SFML/Graphics/Color.hpp>
-#include <SFML/Graphics/Text.hpp>
 
 #include "Globals.h"
 #include "game.h"
 #include "gameState.h"
 #include "bullet.h"
 #include "Buttom.h"
+#include "Text.h"
 
 class Game;
 
@@ -21,21 +19,18 @@ class MenuState : public GameState
 {
 private:
 	
-	//FONTS
-	sf::Font normaltext;
+	//Texts:
+	renderText version;
+	renderText ipText;
+	renderText playernameText;
 
-	sf::Text version;
-	
 	//Network options
-	sf::Text ipadress;
 	bool coop;
 	bool host;
 	bool join;
 
-	sf::Text playernameText;
 	std::string playername;
 		bool nameIN;
-	sf::Text ipText;
 	std::string ipconnect;
 		bool ipIN;
 
@@ -50,7 +45,7 @@ private:
 	sf::Sprite sprite;
 
 	//Private functions:
-	void keyboardInput( sf::Text& , std::string& , bool& );
+	void keyboardInput( renderText& , std::string& , bool& );
 
 public:
 

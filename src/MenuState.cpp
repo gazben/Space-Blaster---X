@@ -2,46 +2,19 @@
 
 
 MenuState::MenuState( Game *game )
+	:ipText( Globals::resolution->xres * ( 10.0 / 12.0 ) , Globals::resolution->yres * ( 3.0 / 12.0 ) , Globals::ip->getLocalAddress().toString() , 30 ),
+	version( Globals::resolution->xres * ( 10.0 / 12.0 ) , Globals::resolution->yres * ( 11.0 / 12.0 ) , *Globals::version , 20  ),
+	playernameText( Globals::resolution->xres * ( 8.0 / 12.0 ) , Globals::resolution->yres * ( 4.0 / 12.0 )  )
 {
-	/////
-	//string draw settings
-	if ( !normaltext.loadFromFile( "MISTRAL.TTF" ) )
-		Globals::log->log( "Problem with the font!" );
-
-	//TODO: own text class
-
-	ipadress.setString( Globals::ip->getLocalAddress().toString() );
-	ipadress.setFont( normaltext );
-	ipadress.setColor( sf::Color::Black );
-	ipadress.setStyle( sf::Text::Regular );
-	ipadress.setCharacterSize( 30 );
-	ipadress.setPosition( Globals::resolution->xres * ( 10.0 / 12.0 ) , Globals::resolution->yres * ( 3.0 / 12.0 ) );
-
-	version.setString( *Globals::version );
- 	version.setStyle( sf::Text::Regular );
- 	version.setFont( normaltext );
-	version.setColor( sf::Color::Black );
- 	version.setPosition( Globals::resolution->xres * ( 10.0 / 12.0 ) , Globals::resolution->yres * ( 11.0 / 12.0 ) );
-	version.setCharacterSize( 20 );
-
-	playernameText.setString( playername );
-	playernameText.setStyle( sf::Text::Regular );
-	playernameText.setFont( normaltext );
-	playernameText.setColor( sf::Color::Black );
-	playernameText.setPosition( Globals::resolution->xres * ( 8.0 / 12.0 ) , Globals::resolution->yres * ( 4.0 / 12.0 ) );
-	playernameText.setCharacterSize( 15 );
-
-	ipText.setString( ipconnect );
-	ipText.setStyle( sf::Text::Regular );
-	ipText.setFont( normaltext );
-	ipText.setColor( sf::Color::Black );
-	ipText.setPosition( Globals::resolution->xres * ( 8.0 / 12.0 ) , Globals::resolution->yres * ( 4.0 / 12.0 ) );
-	ipText.setCharacterSize( 15 );
 
 	tex.loadFromFile( "menu.png" );
 	sprite.setTexture( tex );
 
+
 	this->game = game;
+
+	game -> menustate = this;
+	
 	coop = false;
 	host = false;
 	join = false;
@@ -80,8 +53,8 @@ void MenuState::Update()
 				if( fnc ==  "1 player"){ game->currentState = INGAME; }
 				if( fnc == "quit" ){ game->running = false; }
 				if( fnc == "2 players" ){ coop = true; }
-				if( fnc == "join" ){ coop = true; join = true; }
-				if( fnc == "host" ){ coop = true; host = true; }
+				if( fnc == "join" ){ coop = true; join = true; game->coopnetwork->setServer( false ); game->coopnetwork->setLobby(true); }
+				if( fnc == "host" ){ coop = true; host = true; game->coopnetwork->setServer( true ); game->coopnetwork->setLobby(true);}
 			//TODO
 		}
 
@@ -90,15 +63,27 @@ void MenuState::Update()
 
 	//we need to tell if he wants a server 
 	//we need IP && playername
-	if (join == true && nameIN == false){
-		keyboardInput( playernameText , playername , nameIN ); 
+
+	if ( ( join == true || host == true ) && nameIN == false ){
+		keyboardInput( playernameText , playername , nameIN );
+		game->ingamestate->player.setName( playername );
+		
 	}
-	if ( nameIN == true ){
+	if ( nameIN == true && join == true ){
 		keyboardInput( ipText , ipconnect , ipIN );
+		game ->coopnetwork->setIP( ipconnect );
+		Globals::log->log("connecting to ip:");
+		Globals::log->log( ipconnect );
 	}	
 	
+	if( join == true && ipIN == true && nameIN == true ){
+		
+		if( game->coopnetwork->connected() ){
+			Globals::log->log( "Connection stable :)" );
+		}
 
-
+	}
+	game->coopnetwork->update();
 }
 
 void MenuState::Draw()
@@ -115,8 +100,6 @@ void MenuState::Draw()
 		if ( Buttons[i] ->getObjective() != "host"  && Buttons[i] ->getObjective() != "join" )
 		{
 
-			Globals::log->log( Buttons[i] ->getObjective() );
-
 			game->window.Draw( Buttons[i] ->getSprite() );
 			game->window.Getwindow().draw( Buttons[i] -> getText() );
 
@@ -127,50 +110,49 @@ void MenuState::Draw()
 				game->window.Draw( Buttons[i] ->getSprite() );
 				game->window.Getwindow().draw( Buttons[i] -> getText() );
 
-				game -> window.Getwindow().draw( ipadress );
+				game -> window.Getwindow().draw( ipText.getText() );
 				//player wants to join so we need to print the ip and the name
 				if ( join == true )
 				{
 
 					//the name has not been entered jet
 					if ( nameIN == false ){
-						game->window.Getwindow().draw( playernameText ); }
+						game->window.Getwindow().draw( playernameText.getText() ); }
 					//the name has been entered we the ip adress
 					else{
-						game->window.Getwindow().draw( ipText );
+						game->window.Getwindow().draw( ipText.getText() );
 					}
 
 				}
 
 				//we want to host a server we need the playername
 				if ( host == true ){
-					game->window.Getwindow().draw( playernameText );
+					game->window.Getwindow().draw( playernameText.getText() );
 				}
 			}
 
 		}
 			
 	}
-
-	//texts
-	game -> window.Getwindow().draw( version );
+	
+	//draw th version number
+	game -> window.Getwindow().draw( version.getText() );
 
 }
 
-void MenuState::keyboardInput( sf::Text& text , std::string& str, bool& done)
+void MenuState::keyboardInput( renderText& text , std::string& str, bool& done)
 {
 	//user pressed one of the buttons
 	if( done == false ){
 
 		//delete a character
-		if ( str.size() > 0 && sf::Keyboard::isKeyPressed( sf::Keyboard::BackSpace ) )
+		if ( str.size() > 0 && sf::Keyboard::isKeyPressed( sf::Keyboard::BackSpace ) ){
 			str.pop_back();
-
+		}else
 		//hit enter and end the typing
 		if ( sf::Keyboard::isKeyPressed( sf::Keyboard::Return ) ){
 			done = true;
-		}
-
+		}else
 		//save the keyboard input
 		if( game->event.type == sf::Event::TextEntered ){
 
@@ -181,7 +163,7 @@ void MenuState::keyboardInput( sf::Text& text , std::string& str, bool& done)
 
 		}
 
-	text.setString( str );
+	text.setText( str );
 	}
 
 }

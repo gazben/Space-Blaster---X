@@ -47,13 +47,17 @@ public:
 
 	Player();
 
-	Player(MainWindow*, std::string);	//CTOR
+	Player(MainWindow*);	//CTOR
 
 	mm::vec2 Getpos();
 
 	mm::vec2 Getmovevec();
 
 	float Getrotation();
+
+	std::string getName();
+
+	void setName( std::string );
 
 	sf::Sprite& GetSprite();
 

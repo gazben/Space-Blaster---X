@@ -13,16 +13,18 @@ Zombi::Zombi():hp(100)
 
 	sprite.setPosition( pos.x, pos.y );
 
-	//Sprite data
-	if(Globals::random->getnumber() % 3 == 1)
-		tex.loadFromFile("asteroid1.png");
-	
-	if(Globals::random->getnumber() % 3 == 2)
-		tex.loadFromFile("asteroid2.png");
+	tex.loadFromFile( "zombi.png" );
 
-	if(Globals::random->getnumber() % 3 == 0)
-		tex.loadFromFile("asteroid3.png");
-	
+	//Sprite data
+// 	if(Globals::random->getnumber() % 3 == 1)
+// 		tex.loadFromFile("asteroid1.png");
+// 	
+// 	if(Globals::random->getnumber() % 3 == 2)
+// 		tex.loadFromFile("asteroid2.png");
+// 
+// 	if(Globals::random->getnumber() % 3 == 0)
+// 		tex.loadFromFile("asteroid3.png");
+// 	
 	sprite.setTexture(tex);
 }
 

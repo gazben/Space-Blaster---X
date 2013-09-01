@@ -20,6 +20,7 @@
     <ClCompile Include="..\src\GameObject.cpp" />
     <ClCompile Include="..\src\Globals.cpp" />
     <ClCompile Include="..\src\inGameState.cpp" />
+    <ClCompile Include="..\src\Level.cpp" />
     <ClCompile Include="..\src\logfile.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\MenuState.cpp" />
@@ -27,6 +28,7 @@
     <ClCompile Include="..\src\Network.cpp" />
     <ClCompile Include="..\src\player.cpp" />
     <ClCompile Include="..\src\Random.cpp" />
+    <ClCompile Include="..\src\Text.cpp" />
     <ClCompile Include="..\src\Window.cpp" />
     <ClCompile Include="..\src\Zombi.cpp" />
   </ItemGroup>
@@ -41,12 +43,14 @@
     <ClInclude Include="..\src\gameState.h" />
     <ClInclude Include="..\src\Globals.h" />
     <ClInclude Include="..\src\inGameState.h" />
+    <ClInclude Include="..\src\Level.h" />
     <ClInclude Include="..\src\logfile.h" />
     <ClInclude Include="..\src\MenuState.h" />
     <ClInclude Include="..\src\MovieState.h" />
     <ClInclude Include="..\src\Network.h" />
     <ClInclude Include="..\src\player.h" />
     <ClInclude Include="..\src\Random.h" />
+    <ClInclude Include="..\src\Text.h" />
     <ClInclude Include="..\src\Window.h" />
     <ClInclude Include="..\src\Zombi.h" />
   </ItemGroup>

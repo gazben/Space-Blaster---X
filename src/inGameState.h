@@ -7,10 +7,7 @@
 #include "Zombi.h"
 #include "game.h"
 #include "bullet.h"
-#include "Globals.h"
-#include "Collision.h"
 #include "player.h"
-#include "Network.h"
 
 class Game;
 
@@ -31,28 +28,10 @@ private:
 	//Other things:
 	bool firekeypress;
 
-
-	//////////////////////
-	//network properties:
-// 	std::string ip;
-// 	bool server;
-// 
-// 	network* coopnetwork;
-
-
-	//////////////////////
-
-
-
 	/////////
 	//private functions:
-	////////
-
-		//collision detection
 		void colldet();
-
 		void DrawZombies();
-
 		void DrawBullets();
 
 protected:
@@ -61,7 +40,7 @@ protected:
 
 public:
 
-	InGameState(Game *game, std::string inPlayername = "defaultplayer");
+	InGameState(Game *game);
 
 	~InGameState();
 
@@ -75,6 +54,7 @@ public:
 	void Draw();
 
 	friend class network;
+	friend class MenuState;
 };
 
 #endif // inGameState_h__
