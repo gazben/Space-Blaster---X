@@ -2,10 +2,12 @@
 #define Window_h__
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/View.hpp>
 #include <string>
 
 
 #include "Globals.h"
+#include "Camera.h"
 
 class MainWindow{
 
@@ -13,6 +15,7 @@ private:
 
 	//Window
 	sf::RenderWindow *mainwindow;
+	Camera* camera;
 
 public:
 
@@ -22,7 +25,9 @@ public:
 
 	sf::RenderWindow& Getwindow();
 
-	void Draw(sf::Sprite& sprite);
+	Camera& getCamera();
+
+	void Draw(sf::Drawable& sprite);
 
 
 };

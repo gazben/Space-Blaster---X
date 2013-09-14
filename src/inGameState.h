@@ -8,6 +8,7 @@
 #include "game.h"
 #include "bullet.h"
 #include "player.h"
+#include "Level.h"
 
 class Game;
 
@@ -24,6 +25,10 @@ private:
 
 	// Asteroids
 	std::vector <Zombi*> Zombies;
+
+	//the level itself
+	Level map;
+
 
 	//Other things:
 	bool firekeypress;

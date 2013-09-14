@@ -83,7 +83,10 @@ void MenuState::Update()
 		}
 
 	}
+
 	game->coopnetwork->update();
+
+
 }
 
 void MenuState::Draw()

@@ -25,6 +25,7 @@ namespace Globals{
 	void INIT();
 
 
+
 	//extern pointers 
 	//DELETE THEM IN freeGlobals()!!!
 

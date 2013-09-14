@@ -10,6 +10,11 @@
 #include "Globals.h"
 
 //one tile of the map
+
+mm::vec2& getCoordinates( int , int );		//converts the tile numbers into pixels 
+
+mm::vec2& getTileCoordinates( float , float ); //converts the tile coordinates into tilecoordinates
+
 class Tile{
 
 private:
@@ -41,7 +46,11 @@ public:
 	Level();
 	~Level();
 
+	Tile& getTile ( int  , int );
+
 	bool isObstacle( int , int );
+
+	friend mm::vec2& getCoordinates( int x, int y);
 
 };
 

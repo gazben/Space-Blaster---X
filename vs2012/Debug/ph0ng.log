@@ -1,3 +1,39 @@
-﻿  Network.cpp
+﻿  Level.cpp
 e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+e:\bme\sch-gamedev\space-blaster---x\src\level.cpp(42): warning C4018: '<' : signed/unsigned mismatch
+  Camera.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  MenuState.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+e:\bme\sch-gamedev\space-blaster---x\src\menustate.cpp(35): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\menustate.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\menustate.cpp(100): warning C4018: '<' : signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  main.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+  inGameState.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(23): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(29): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(42): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(48): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(59): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(77): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(105): warning C4018: '<' : signed/unsigned mismatch
+e:\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(108): warning C4018: '<' : signed/unsigned mismatch
+  game.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+e:\bme\sch-gamedev\space-blaster---x\src\game.cpp(15): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          e:\programfájlok (x86)\microsoft visual studio 11.0\vc\include\time.inl(112) : see declaration of 'localtime'
+e:\bme\sch-gamedev\space-blaster---x\src\game.cpp(17): warning C4996: 'asctime': This function or variable may be unsafe. Consider using asctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          e:\programfájlok (x86)\microsoft visual studio 11.0\vc\include\time.h(153) : see declaration of 'asctime'
+e:\bme\sch-gamedev\space-blaster---x\src\game.cpp(43): warning C4018: '<' : signed/unsigned mismatch
+  Network.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+  MovieState.cpp
+e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   ph0ng.vcxproj -> E:\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.exe
