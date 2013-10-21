@@ -1,5 +1,5 @@
 // ******************************************************************************
-// *	Space blaster 2.0 minigame --- main.cpp
+// *	Zombisch 2.0 minigame --- main.cpp
 // *	Copyright (c) 2013 KSZK Game-Dev/ Gazben (see LICENSE.md for full license)
 // *
 // *	Entry point for the game, initializes SFML and subsystems.

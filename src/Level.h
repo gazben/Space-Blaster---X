@@ -8,31 +8,13 @@
 
 #include "mymath/mymath.h"
 #include "Globals.h"
+#include "Tile.h"
 
 //one tile of the map
 
 mm::vec2& getCoordinates( int , int );		//converts the tile numbers into pixels 
 
 mm::vec2& getTileCoordinates( float , float ); //converts the tile coordinates into tilecoordinates
-
-class Tile{
-
-private:
-
-	mm::vec2 center;
-	//int lengh;  //weight of the edge
-	bool obstacle;
-
-public:
-
-	Tile( bool , float , float, float);
-	~Tile(  );
-
-	bool isObstacle(  );
-	sf::FloatRect corners(  );
-
-};
-
 
 //the whole level
 class Level{

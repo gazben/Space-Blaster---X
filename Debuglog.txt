@@ -1,7 +1,9 @@
 Globals: INIT SUCCESS
-Thu Sep 12 13:14:19 2013
+Sun Oct 20 23:47:44 2013
 
 
+Zombisch pre-Alfa version - Release version
+ movie load SUCCESS 
 Zombisch pre-Alfa version - Debug version
 Level loaded!
 Level loaded!
@@ -10003,21 +10005,3 @@ Level loaded!
 Level loaded!
 Level loaded!
 Level loaded!
-rotation: -46.322
-rotation: -86.2007
-rotation: -75.1013
-rotation: -70.7829
-rotation: -13.8972
-rotation: 62.488
-rotation: 58.8049
-rotation: 43.516
-rotation: -39.8056
-rotation: -84.5445
-rotation: -71.5219
-rotation: -78.6462
-rotation: -9.65989
-rotation: -82.6004
-rotation: -62.128
-rotation: -17.8961
-rotation: 2.31372
-rotation: 37.1709

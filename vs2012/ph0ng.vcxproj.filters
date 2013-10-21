@@ -28,6 +28,7 @@
     <ClCompile Include="..\src\Text.cpp" />
     <ClCompile Include="..\src\Level.cpp" />
     <ClCompile Include="..\src\Camera.cpp" />
+    <ClCompile Include="..\..\..\Dropbox\BME\SCH-GameDev\Space-Blaster---X\src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AnimatedSprite.hpp" />
@@ -51,5 +52,6 @@
     <ClInclude Include="..\src\Text.h" />
     <ClInclude Include="..\src\Level.h" />
     <ClInclude Include="..\src\Camera.h" />
+    <ClInclude Include="..\..\..\Dropbox\BME\SCH-GameDev\Space-Blaster---X\src\Tile.h" />
   </ItemGroup>
 </Project>
