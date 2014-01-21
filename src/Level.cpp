@@ -76,3 +76,8 @@ Tile& Level::getTile( int widht , int height )
 {
 	return *level[ widht ][ height ];
 }
+
+const std::vector < std::vector< Tile* > >& Level::getMap()
+{
+	return level;
+}

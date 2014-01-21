@@ -15,10 +15,10 @@ Player::Player(MainWindow* inwindow):window(inwindow)
 	alfa = 0;
 
 	//Sprite data
-	tex.loadFromFile("playertexture.png");
+	tex.loadFromFile("res/player.png");
 	sprite.setPosition( pos.x , pos.y );
 	sprite.setTexture(tex);
-
+	sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
 }
 
 
@@ -32,7 +32,8 @@ sf::Sprite& Player::GetSprite()
 //DO NOT TOUCH! math is doing its thing in here!
 void Player::rotate(){
 
-	sprite.setOrigin( tex.getSize().x / 2.0 , tex.getSize().y / 2.0 );
+	//sprite.setOrigin( tex.getSize().x / 2.0 , tex.getSize().y / 2.0 );
+	sprite.setOrigin( 16, 16);
 
 	movevec.x = sf::Mouse::getPosition( window->Getwindow() ).x - sprite.getPosition().x;
 	movevec.y = sf::Mouse::getPosition( window->Getwindow() ).y - sprite.getPosition().y;	

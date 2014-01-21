@@ -1,7 +1,8 @@
 Globals: INIT SUCCESS
-Thu Aug 29 11:06:56 2013
+Wed Oct 23 17:29:07 2013
 
 
 Zombisch pre-Alfa version - Release version
  movie load SUCCESS 
 Zombisch pre-Alfa version - Debug version
+rotation: -51.31

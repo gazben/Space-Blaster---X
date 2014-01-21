@@ -1,3 +1,6 @@
+#ifndef Text_h__
+#define Text_h__
+
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -29,3 +32,4 @@ public:
 	sf::Text& getText();
 
 };
+#endif // Text_h__

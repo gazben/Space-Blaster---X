@@ -55,7 +55,6 @@ public:
 
 	void Update();
 		
-
 	void Draw();
 
 	friend Buttom;

@@ -11,7 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Dropbox\BME\SCH-GameDev\Space-Blaster---X\src\Tile.cpp" />
     <ClCompile Include="..\src\AnimatedSprite.cpp" />
     <ClCompile Include="..\src\Animation.cpp" />
     <ClCompile Include="..\src\bullet.cpp" />
@@ -31,11 +30,11 @@
     <ClCompile Include="..\src\player.cpp" />
     <ClCompile Include="..\src\Random.cpp" />
     <ClCompile Include="..\src\Text.cpp" />
+    <ClCompile Include="..\src\Tile.cpp" />
     <ClCompile Include="..\src\Window.cpp" />
     <ClCompile Include="..\src\Zombi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Dropbox\BME\SCH-GameDev\Space-Blaster---X\src\Tile.h" />
     <ClInclude Include="..\src\AnimatedSprite.hpp" />
     <ClInclude Include="..\src\Animation.hpp" />
     <ClInclude Include="..\src\bullet.h" />
@@ -55,6 +54,7 @@
     <ClInclude Include="..\src\player.h" />
     <ClInclude Include="..\src\Random.h" />
     <ClInclude Include="..\src\Text.h" />
+    <ClInclude Include="..\src\Tile.h" />
     <ClInclude Include="..\src\Window.h" />
     <ClInclude Include="..\src\Zombi.h" />
   </ItemGroup>

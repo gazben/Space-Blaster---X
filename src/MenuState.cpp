@@ -7,9 +7,11 @@ MenuState::MenuState( Game *game )
 	playernameText( Globals::resolution->xres * ( 8.0 / 12.0 ) , Globals::resolution->yres * ( 4.0 / 12.0 )  )
 {
 
-	tex.loadFromFile( "menu.png" );
+	tex.loadFromFile( "res/menu.jpg" );
 	sprite.setTexture( tex );
 
+
+	sprite.setScale( 1.3 , 1.3  );
 
 	this->game = game;
 
@@ -22,11 +24,11 @@ MenuState::MenuState( Game *game )
 	ipIN = false;
 
 	//Creating the buttons
-	Buttons.push_back( new Buttom( Globals::resolution -> xres / 4 , Globals::resolution -> yres / 4 , "button.png" , "1 player" ) );
-	Buttons.push_back( new Buttom( Globals::resolution -> xres / 4 , Globals::resolution -> yres / 2 , "button.png" , "quit" ) );
-	Buttons.push_back( new Buttom( Globals::resolution -> xres / 2 , Globals::resolution -> yres / 4 , "button.png" , "2 players" ) );
-	Buttons.push_back( new Buttom( Globals::resolution -> xres * ( 3.0 / 4.0 ) , Globals::resolution -> yres  * (2.0 /6.0) , "button.png" , "host" ) );
-	Buttons.push_back( new Buttom( Globals::resolution -> xres * ( 3.0 / 4.0 ) , Globals::resolution -> yres  * (3.0 /6.0), "button.png" , "join" ) );
+	Buttons.push_back( new Buttom( Globals::resolution -> xres / 12 , Globals::resolution -> yres / 8 , "res/roundRect.gif" , "1 player" ) );
+	Buttons.push_back( new Buttom( Globals::resolution -> xres / 12 , Globals::resolution -> yres / 4 , "res/roundRect.gif" , "2 players" ) );
+	Buttons.push_back(new Buttom(Globals::resolution->xres / 2, Globals::resolution->yres / 4, "res/roundRect.gif", "quit"));
+	Buttons.push_back( new Buttom( Globals::resolution -> xres * ( 3.0 / 4.0 ) , Globals::resolution -> yres  * (2.0 /6.0) , "res/roundRect.gif" , "host" ) );
+	Buttons.push_back( new Buttom( Globals::resolution -> xres * ( 3.0 / 4.0 ) , Globals::resolution -> yres  * (3.0 /6.0), "res/roundRect.gif" , "join" ) );
 
 }
 

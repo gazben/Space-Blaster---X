@@ -14,3 +14,4 @@ int Random::getnumber()
 {
 	return rand();
 }
+

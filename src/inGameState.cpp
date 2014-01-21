@@ -1,7 +1,9 @@
-#include "inGameState.h"
+#include <vector>
 
+#include "inGameState.h"
 #include "Globals.h"
 #include "Collision.h"
+#include "Level.h"
 
 InGameState::InGameState(Game *game):player(&game->window)
 {
@@ -89,13 +91,50 @@ void InGameState::DrawBullets()
 	}
 }
 
+//DEBUG stuff - test the tile system!
+void InGameState::DrawTiles()
+{
+	int number = 1;
+	
+
+// 	sf::Font font;
+// 	font.loadFromFile("MISTRAL.TTF");
+// 	sf::Text renderNumber(std::to_string(number), font, 13);
+
+//	renderNumber.setPosition(0, 0);
+
+	for(unsigned int x = 0; x < map.getMap().size(); ++x ){
+	
+		for (unsigned int y = 0; y < map.getMap()[x].size(); ++y){
+
+// 			renderNumber.setPosition(map.getMap()[x][y]->corners().left, map.getMap()[x][y]->corners().top);
+// 
+// 			game->window.Getwindow().draw(renderNumber);
+// 			number++;
+// 			renderNumber.setString( std::to_string(number) );
+
+			game->window.Draw(map.getMap()[x][y]->getSprite());
+		}
+	
+	}
+}
+
 void InGameState::Draw()
 {
+	DrawTiles();
+
+	game->window.getCamera().setCenter(player.Getpos().x, player.Getpos().y);
+
+	game->window.Getwindow().setView(game->window.getCamera().getView());
+
 	game->window.Draw( player.GetSprite() );
 
 	DrawBullets();
 
 	DrawZombies();
+
+	//for debugging
+	
 
 }
 
@@ -152,11 +191,9 @@ void InGameState::Logic()
 
 
 	//Zombie generation
-// 	if( Globals::random->getnumber() % 100 ==  25 || 50 )
-// 	{
-// 		Zombies.push_back( new Zombi() );
-// 	}
+ 	if( ( Globals::random->getnumber() % 100 ==  25 || 50 ) && Zombies.size() < 10 )
+ 	{
+ 		Zombies.push_back( new Zombi() );
+ 	}
 
 }
-
-

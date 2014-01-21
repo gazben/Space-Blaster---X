@@ -1,14 +1,14 @@
 #ifndef Level_h__
 #define Level_h__
 
-#define tileSIZE 32 //size of one of the tiles
-#define tileAMMOUNT 100  // how many tiles we want (ammount of tiles = tileAMMOUNT*tileAMMOUNT)
+#define tileSIZE 64 //size of one of the tiles
+#define tileAMMOUNT 50  // how many tiles we want (ammount of tiles = tileAMMOUNT*tileAMMOUNT)
 
 #include <vector>
 
 #include "mymath/mymath.h"
-#include "Globals.h"
 #include "Tile.h"
+#include "Globals.h"
 
 //one tile of the map
 
@@ -29,6 +29,8 @@ public:
 	~Level();
 
 	Tile& getTile ( int  , int );
+
+	const std::vector < std::vector< Tile* > >& getMap();
 
 	bool isObstacle( int , int );
 

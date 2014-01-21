@@ -38,6 +38,7 @@ private:
 		void colldet();
 		void DrawZombies();
 		void DrawBullets();
+		void DrawTiles();  //for testing the camera and the tile system
 
 protected:
 
@@ -52,7 +53,7 @@ public:
 	//updates positions 
 	void Update();
 
-	//do stuff with the exiswting objects! (for ex.: collision) 
+	//do stuff with the existing objects! (for ex.: collision) 
 	void Logic();
 
 	//render the scene

@@ -4,8 +4,8 @@
 Zombi::Zombi():hp(100)
 {
 	//starting position for the asteroid
-	//pos.x = Globals::random -> getnumber() % Globals::resolution -> xres;
-	//pos.y = 0;
+	pos.x = Globals::random -> getnumber() % (int) Globals::resolution -> xres;
+	pos.y = Globals::random -> getnumber() %  (int) Globals::resolution -> yres;
 
 	//initial speed for the asteroid
 	movevec.x = 0;
@@ -13,7 +13,8 @@ Zombi::Zombi():hp(100)
 
 	sprite.setPosition( pos.x, pos.y );
 
-	tex.loadFromFile( "zombi.png" );
+	tex.loadFromFile( "res/enemy01.png" );
+
 
 	//Sprite data
 // 	if(Globals::random->getnumber() % 3 == 1)
@@ -26,6 +27,8 @@ Zombi::Zombi():hp(100)
 // 		tex.loadFromFile("asteroid3.png");
 // 	
 	sprite.setTexture(tex);
+
+	sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
 }
 
 sf::Sprite& Zombi::GetSprite()
@@ -35,8 +38,8 @@ sf::Sprite& Zombi::GetSprite()
 
 void Zombi::update()
 {
-	pos.x += movevec.x;
-	pos.y += movevec.y;
+	//pos.x += movevec.x;
+	//pos.y += movevec.y;
 
 	sprite.setPosition( pos.x , pos.y );		//update the sprite position
 }

@@ -1,6 +1,44 @@
-﻿  Level.cpp
-e:\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
-e:\bme\sch-gamedev\space-blaster---x\src\level.cpp(14): warning C4172: returning address of local variable or temporary
-e:\bme\sch-gamedev\space-blaster---x\src\level.cpp(28): warning C4172: returning address of local variable or temporary
-e:\bme\sch-gamedev\space-blaster---x\src\level.cpp(74): warning C4018: '<' : signed/unsigned mismatch
-  Globals.cpp
+﻿Build started 2013.10.21. 23:37:41.
+     1>Project "F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\ph0ng.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\..\src\sfe\include" /I"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\..\src\SFML\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D SFML_DYNAMIC /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\inGameState.cpp
+         inGameState.cpp
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\mymath\mm_common.h(41): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(50): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(61): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(144): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\dropbox\bme\sch-gamedev\space-blaster---x\src\ingamestate.cpp(147): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\..\src\SFML\lib" /LIBPATH:"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\..\src\sfe\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "sfml-main-d.lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.lib" /MACHINE:X86 Debug\AnimatedSprite.obj
+         Debug\Animation.obj
+         Debug\bullet.obj
+         Debug\Buttom.obj
+         Debug\Camera.obj
+         Debug\Collusion.obj
+         Debug\game.obj
+         Debug\GameObject.obj
+         Debug\Globals.obj
+         Debug\inGameState.obj
+         Debug\Level.obj
+         Debug\logfile.obj
+         Debug\main.obj
+         Debug\MenuState.obj
+         Debug\MovieState.obj
+         Debug\Network.obj
+         Debug\player.obj
+         Debug\Random.obj
+         Debug\Text.obj
+         Debug\Tile.obj
+         Debug\Window.obj
+         Debug\Zombi.obj
+     1>sfml-main-d.lib(SFML_Main.cpp.obj) : warning LNK4099: PDB 'sfml-main-d.pdb' was not found with 'sfml-main-d.lib(SFML_Main.cpp.obj)' or at 'F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\sfml-main-d.pdb'; linking object as if no debug info
+         ph0ng.vcxproj -> F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\Debug\Zombisch.exe
+     1>Done Building Project "F:\Dropbox\BME\SCH-GameDev\Space-Blaster---X\vs2012\ph0ng.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.24
